@@ -7,43 +7,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link type="text/css" rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/wallpaper.css">
 </head>
 
 <body>
-    <div class="ad">
-        <div class="box" id="draggable">
-            <heading class="box__heading" id="draggableheader">
-                <span>Design</span>
-            </heading>
+    <div id="gamescreen">
+        <div id="wallpaper">
+            <div id="neon"><span>Synth</span><span>OS</span></div>
+            <div id="grid"></div>
+            <div id="top"><div id="sun"></div></div>
+            <div id="mountain"></div>
         </div>
-        <section class="box message-box">
-            <heading class="box__heading">
-                <span>Mail</span>
-            </heading>
 
-            <h1 id="mailbox-header" style="">Inbox</h1>
-            <div class="mailbox-list">
-                <ul class="message-list">
-                    <li class="message">
-                        <div class="mail-grid">
-                            <img src="../images/img_avatar.png" alt="Avatar">
-                            <div>
-                                <div class="date">Mar 5</div>
-                                <div class="name">Connor Hewitt</div>
-                                <div class="message-content">
-                                    They're firing me and giving you my position'
+        <div id="wallpaper-overlay"></div>
+
+        <div id="desktop">
+        </div>
+
+        <div id="window" class="ad">
+            <div class="box draggable">
+                <heading class="box__heading draggableHeader">
+                    <span>Design</span>
+                </heading>
+        
+                <div class="box__content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, veritatis.</p>
+            
+                    <p>Consectetur adipisicing elit. Suscipit incidunt quod, accusamus molestiae, quisquam nulla accusantium
+                        harum excepturi exercitationem molestias corrupti rem! Labore quis rem magni ipsum reprehenderit
+                        voluptate nam.</p>
+                    <p>Ab corrupti ipsa officia quia, dolorem vitae? Amet iusto pariatur adipisci? Quod, doloremque animi
+                        accusamus cupiditate itaque in at odit molestias quam sint numquam! Molestias reiciendis accusantium
+                        beatae numquam. Nostrum ipsum consequatur a corporis, veritatis error reprehenderit quisquam iusto
+                        praesentium illum incidunt quibusdam, placeat eos distinctio sint repudiandae culpa libero
+                        voluptatem optio explicabo. </p>
+                </div>
+            </div>
+
+            <div class="box draggable">
+                <heading class="box__heading draggableHeader">
+                    <span>Mail</span>
+                </heading>
+
+                <div class="box__content message-box">
+                    <h1 id="mailbox-header" style="">Inbox</h1>
+                    <div class="mailbox-list">
+                        <ul class="message-list">
+                            <li class="message">
+                                <div class="mail-grid">
+                                    <img src="../images/img_avatar.png" alt="Avatar">
+                                    <div>
+                                        <div class="date">Mar 5</div>
+                                        <div class="name">Connor Hewitt</div>
+                                        <div class="message-content">
+                                            They're firing me and giving you my position'
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </li>
-                 </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
     </div>
-    </section>
-
 
     <script src="../js/index.js"></script>
+    <script src="../js/wallpaper.js"></script>
 </body>
 
 </html>
