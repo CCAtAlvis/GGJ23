@@ -1,5 +1,8 @@
 const draggable = document.querySelectorAll(".draggable");
-draggable.forEach((e) => { dragElement(e) });
+draggable.forEach((e) => { 
+  dragElement(e);
+  bringToTop(e);
+});
 
 let topZindex = 110;
 function dragElement(elmnt) {
@@ -23,9 +26,6 @@ function dragElement(elmnt) {
     document.onmouseup = closeDragElement;
     // call a function whenever the cursor moves:
     document.onmousemove = elementDrag;
-
-    topZindex++;
-    e.target.parentElement.style.zIndex = topZindex;
   }
 
   function elementDrag(e) {
@@ -45,6 +45,15 @@ function dragElement(elmnt) {
     // stop moving when mouse button is released:
     document.onmouseup = null;
     document.onmousemove = null;
+  }
+}
+
+function bringToTop(element) {
+  element.onmousedown = changeZindex;
+
+  function changeZindex(e) {
+    topZindex++;
+    element.style.zIndex = topZindex;
   }
 }
 
