@@ -1,6 +1,6 @@
 let emails;
+$('#mail').hide();
 $.getJSON("../data/mail.json", function (data) {
-    $('#mail').hide();
     emails = data;
     data.forEach(email => {
         let emailElement = `<li class="message" id="${email.uid}" onclick=openMail(this.id)>
@@ -16,7 +16,6 @@ $.getJSON("../data/mail.json", function (data) {
     </div>
     </li>`
         $("#mails-inbox").append(emailElement);
-        console.log("hello")
     });
 
 });
