@@ -16,7 +16,9 @@
         <div id="wallpaper">
             <div id="neon"><span>Synth</span><span>OS</span></div>
             <div id="grid"></div>
-            <div id="top"><div id="sun"></div></div>
+            <div id="top">
+                <div id="sun"></div>
+            </div>
             <div id="mountain"></div>
         </div>
 
@@ -28,18 +30,23 @@
         <div id="window" class="ad">
             <div class="box draggable">
                 <heading class="box__heading draggableHeader">
+                    <div class="box__close"> x </div>
                     <span>Design</span>
                 </heading>
-        
+
                 <div class="box__content">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, veritatis.</p>
-            
-                    <p>Consectetur adipisicing elit. Suscipit incidunt quod, accusamus molestiae, quisquam nulla accusantium
+
+                    <p>Consectetur adipisicing elit. Suscipit incidunt quod, accusamus molestiae, quisquam nulla
+                        accusantium
                         harum excepturi exercitationem molestias corrupti rem! Labore quis rem magni ipsum reprehenderit
                         voluptate nam.</p>
-                    <p>Ab corrupti ipsa officia quia, dolorem vitae? Amet iusto pariatur adipisci? Quod, doloremque animi
-                        accusamus cupiditate itaque in at odit molestias quam sint numquam! Molestias reiciendis accusantium
-                        beatae numquam. Nostrum ipsum consequatur a corporis, veritatis error reprehenderit quisquam iusto
+                    <p>Ab corrupti ipsa officia quia, dolorem vitae? Amet iusto pariatur adipisci? Quod, doloremque
+                        animi
+                        accusamus cupiditate itaque in at odit molestias quam sint numquam! Molestias reiciendis
+                        accusantium
+                        beatae numquam. Nostrum ipsum consequatur a corporis, veritatis error reprehenderit quisquam
+                        iusto
                         praesentium illum incidunt quibusdam, placeat eos distinctio sint repudiandae culpa libero
                         voluptatem optio explicabo. </p>
                 </div>
@@ -47,6 +54,7 @@
 
             <div class="box draggable">
                 <heading class="box__heading draggableHeader">
+                    <div class="box__close"> X </div>
                     <span>Mail</span>
                 </heading>
                 <div class="box__content message-box" id="mail">
@@ -60,13 +68,50 @@
                     </div>
                 </div>
             </div>
-    </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    <script src="../js/index.js"></script>
-    <script src="../js/window.js"></script>
-    <script src="../js/wallpaper.js"></script>
-    <script src="../js/mail.js"></script>
+            <div class="box draggable">
+                <heading class="box__heading draggableHeader">
+                    <div class="box__close"> X </div>
+                    <span>Profile</span>
+                </heading>
+
+                <div class="box__content message-box">
+                    <h1 id="mailbox-header" style>Profile</h1>
+                    <div class="mailbox-list">
+                        <li class="message">
+                            <div>
+                                <center><img src="../images/img_avatar.png" alt="Avatar"></center>
+                                <div>
+                                    <b>Name:</b>
+                                    <div class="name">Connor Hewitt</div>
+                                    <b>DOB: </b>
+                                    <div class="date">Mar 5, 1977</div>
+                                    <b>Bio:</b>
+                                    <div class="name">
+                                        I am Connor Hewitt, a market analyst.<br>
+                                        With 17 years of experience, I lead a team of 5.
+                                    </div>
+                                    <b>Email:</b>
+                                    <div class="name">
+                                        connor@haxker.com
+                                    </div>
+                                    <b>Phone:</b>
+                                    <div class="name">
+                                        9696969696
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <script src="../js/index.js"></script>
+        <script src="../js/window.js"></script>
+        <script src="../js/wallpaper.js"></script>
+        <script src="../js/mail.js"></script>
 </body>
 
 </html>

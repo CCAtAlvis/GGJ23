@@ -1,5 +1,4 @@
 const draggable = document.querySelectorAll(".draggable");
-
 draggable.forEach((e) => { dragElement(e) });
 
 let topZindex = 110;
@@ -46,5 +45,17 @@ function dragElement(elmnt) {
     // stop moving when mouse button is released:
     document.onmouseup = null;
     document.onmousemove = null;
+  }
+}
+
+const closeble = document.querySelectorAll(".box__close");
+closeble.forEach((e) => { makeCloseble(e) });
+
+function makeCloseble(element) {
+  element.onmousedown = close;
+
+  function close(e) {
+    const parent = e.target.parentElement.parentElement;
+    parent.style.display = "none";
   }
 }
