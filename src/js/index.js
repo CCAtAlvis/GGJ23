@@ -1,10 +1,16 @@
-dragElement(document.getElementById("draggable"));
+const draggable = document.querySelectorAll(".draggable");
+
+draggable.forEach((element) => {
+  dragElement(element)
+});
 
 function dragElement(elmnt) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById(elmnt.id + "header")) {
+  let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  let draggableHeaders = elmnt.querySelectorAll(".draggableHeader");
+
+  if (draggableHeaders.length > 0) {
     // if present, the header is where you move the DIV from:
-    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+    draggableHeaders[0].onmousedown = dragMouseDown;
   } else {
     // otherwise, move the DIV from anywhere inside the DIV:
     elmnt.onmousedown = dragMouseDown;
