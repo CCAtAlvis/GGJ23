@@ -87,6 +87,14 @@ body {
   background: white;
 }
 
+.box__close {
+    position: absolute;
+    left: 1rem;
+    padding: 0px 3px;
+    border-radius: 3px;
+    background-color: #eee;
+}
+
 .box__content {
     background-color: #fff;
 }
