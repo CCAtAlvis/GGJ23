@@ -114,6 +114,8 @@ body {
 
 #mailbox-header {
   background-color: #f37087;
+  text-overflow: ellipsis;
+  overflow: hidden; 
   border-radius: 5px 5px 0 0;
   color: #ecf0f1;
   font-weight: bold;
