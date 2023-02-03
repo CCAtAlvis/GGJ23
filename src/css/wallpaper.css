@@ -24,6 +24,27 @@
     transform: rotate(3deg);
 }
 
+#neon span:nth-child(1) {
+    animation: neon 1.7s infinite alternate;
+}
+
+#neon span:nth-child(2) {
+    animation: neon 1.7s infinite alternate-reverse;
+}
+
+@keyframes neon{
+    0%, 18%, 22%, 26%, 58%, 62%, 100%{
+        text-shadow:
+        0 0 8px #fff,
+        0 0 24px #fff,
+        0 0 32px #f80022,
+        0 0 40px #f80022;
+    }
+    20%, 24%, 60%{        
+        text-shadow: none;
+    }    
+}
+
 #grid {
     width: 180%;
     height: 100%;
@@ -33,6 +54,14 @@
     position: absolute;
     inset: 0 0 -23% -40%;
     transform: perspective(60vh) rotateX(75deg) translateY(-6.25vh);
+
+    animation: gridz .8s infinite linear;
+}
+
+@keyframes gridz {
+    100%{
+      transform: perspective(60vh) rotateX(75deg) translateY(6.25vh);
+    }
 }
 
 #grid div {
@@ -85,6 +114,25 @@
     position: absolute;
     inset: 5vh 0 auto 0;
     transform: translateY(6vh);
+    animation: sunset 6s linear infinite;
+}
+
+@keyframes sunset{
+    0%,5%{
+        background: #45125e;
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    70%{
+        background: #A22561;
+    }
+    100%{
+        height: 4vh;
+        background: #E03263;
+        transform: translateY(40vh);
+    }
 }
 
 #mountain:before {

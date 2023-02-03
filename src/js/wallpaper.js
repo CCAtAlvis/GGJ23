@@ -11,6 +11,18 @@ function setStars(numS) {
 }
 setStars(250);
 
+// Sun Animation
+let sunset=document.getElementById("sun");
+function synthSun(nmb){
+	for (let i=0; i<nmb*2; i++){
+		let sunin=document.createElement("div");
+		sunin.setAttribute("class","sun");
+		sunin.style.animationDelay=-.5*i++ + "s";
+		sunset.appendChild(sunin);
+	}
+}
+synthSun(8);
+
 // create synth grids
 const wallpaperGrid = document.querySelector("#wallpaper #grid");
 function createSynthGrid(num) {
