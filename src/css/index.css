@@ -1,88 +1,52 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap");
-body {
-  --color1: #0E0A24;
-  --color2: #4C3F97;
-  --patternsize: 3px;
-  background-image: linear-gradient(135deg, var(--color1) 25%, transparent 25%), linear-gradient(225deg, var(--color1) 25%, transparent 25%), linear-gradient(45deg, var(--color1) 25%, transparent 25%), linear-gradient(315deg, var(--color1) 25%, var(--color2) 25%);
-  background-size: var(--patternsize) var(--patternsize);
-  background-attachment: fixed;
-  background-repeat: repeat;
+@import url("https://db.onlinewebfonts.com/c/c86f6e311c62f1ee74affa41d9c3686f?family=Streamster");
+
+@font-face{
+    font-family: "Streamster";
+    src: url("https://db.onlinewebfonts.com/t/c86f6e311c62f1ee74affa41d9c3686f.woff") format("woff"),
+    url("https://db.onlinewebfonts.com/t/c86f6e311c62f1ee74affa41d9c3686f.woff2") format("woff2");
 }
 
-.button {
-  display: inline-block;
-  border-radius: 1000px;
-  padding: 1rem 2rem;
-  background: white;
-  border: 3px solid white;
-  outline: 4px solid pink;
-  box-shadow: inset 0 0 0 4px orange;
+*{
+    margin: auto;
+    padding: 0;
+    cursor: default;
 }
-.button:hover {
-  outline: 4px solid black;
-  box-shadow: inset 0 0 0 4px black;
+
+body {
+    --color1: #0E0A24;
+    --color2: #4C3F97;
+    --patternsize: 3px;
+    width: 100vw;
+    height: 100vh;
+    background: #09090e;
+    overflow: hidden;
+}
+
+#wallpaper {
+    height: 100vh;
+}
+
+#wallpaper-overlay {
+    z-index: 50;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+#window {
+    z-index: 100;
+    top: 0;
+    left: 0;
+    position: absolute;
 }
 
 .ad {
-  max-width: 1500px;
-  margin: 0 auto;
   font-family: "VT323", monospace;
-  padding: 3rem;
 }
 
-h1,
-h2 {
-  text-align: center;
-  font-family: "Press Start 2P", cursive;
-  text-shadow: 2px 2px 16px #F37087;
-  color: #F37087;
-  line-height: 1.5em;
-}
-
-.hero {
-  max-width: 624px;
-  display: block;
-  margin: 0 auto;
-  border-radius: 20px;
-  filter: saturate(12);
-}
-
-.circle {
-  width: 400px;
-  height: 400px;
-  background: linear-gradient(#011846, #682279);
-  border-radius: 1000px;
-  margin-top: -2em;
-  z-index: 20;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 2px 2px 26px #F37087;
-}
-.circle:after {
-  content: "";
-  opacity: 0.6;
-  background: linear-gradient(to bottom, transparent, transparent 20%, black 20%, black);
-  background-size: 100% 9px;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  display: block;
-}
-
-.copy {
-  columns: 2 350px;
-  column-rule: 1px solid black;
-  break-inside: after-white-space;
-  padding: 0 10px;
-  text-align: justify;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr;
-  gap: 1rem;
-}
 
 .box {
   background: lightgrey;
@@ -95,9 +59,10 @@ h2 {
   background: #fff;
   line-height: 1.5rem;
   box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+  z-index: 111;
 }
 .box:after {
-  background: linear-gradient(to bottom, hotpink, #08CCB4 50%);
+  /* background: linear-gradient(to bottom, hotpink, #08CCB4 50%);
   content: "";
   width: 100%;
   height: 100%;
@@ -105,7 +70,7 @@ h2 {
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
-  z-index: -1;
+  z-index: -1; */
 }
 
 .box__heading {
