@@ -86,7 +86,8 @@ h2 {
 
 .box {
   background: lightgrey;
-  position: relative;
+  position: absolute;
+  width: 500px;
   box-shadow: 2px 2px;
   margin-bottom: 2rem;
   padding: 1rem;
@@ -120,6 +121,10 @@ h2 {
 .box__heading span {
   padding: 0 1rem;
   background: white;
+}
+
+.box__content {
+    background-color: #fff;
 }
 
 .inline {
