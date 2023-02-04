@@ -13,7 +13,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/jquery.terminal@2.x.x/js/jquery.terminal.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/jquery.terminal@2.x.x/css/jquery.terminal.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/jquery.terminal@2.x.x/css/jquery.terminal.min.css" />
 </head>
 
 <body>
@@ -117,32 +117,17 @@
                 </heading>
 
                 <div class="box__content message-box">
-                    <h1 id="mailbox-header" style>Profile</h1>
+
+
+                    <input type="search" placeholder="Search.." id="search-field">
+                    <button onclick="search()">Search</button>
+
                     <div class="mailbox-list">
-                        <li class="message">
-                            <div>
-                                <img src="../images/img_avatar.png" alt="Avatar" class="center">
-                                <div>
-                                    <b>Name:</b>
-                                    <div class="name">Connor Hewitt</div>
-                                    <b>DOB: </b>
-                                    <div class="date">Mar 5, 1977</div>
-                                    <b>Bio:</b>
-                                    <div class="name">
-                                        I am Connor Hewitt, a market analyst.<br>
-                                        With 17 years of experience, I lead a team of 5.
-                                    </div>
-                                    <b>Email:</b>
-                                    <div class="name">
-                                        connor@haxker.com
-                                    </div>
-                                    <b>Phone:</b>
-                                    <div class="name">
-                                        9696969696
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+                        <div class="message" id="profile-data">
+                            <ul class="message-list" id="profile-list">
+
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -168,6 +153,7 @@
         <script src="../js/mail.js"></script>
         <script src="../js/terminal.js"></script>
         <script src="../js/news.js"></script>
+        <script src="../js/profiles.js"></script>
 </body>
 
 </html>

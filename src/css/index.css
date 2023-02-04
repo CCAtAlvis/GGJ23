@@ -181,6 +181,11 @@ img {
     border-radius: 50%;
     height: 80px;
 }
+
+.news-img{
+  border-radius: 0%;
+  height: 160px;
+}
 .mail-grid{
   display: inline-flex;
   flex-wrap: nowrap;
@@ -195,4 +200,9 @@ img {
   overflow-y: scroll;
   height: 200px;
   width: 90%;
+}
+.news-messssage{
+  overflow-y: scroll;
+  height: 200px;
+  width: 95%;
 }
