@@ -1,6 +1,6 @@
 windowsList = ["window-mail", "window-help", "window-profile" , "window-news"]
 
-// Function to show window based on dev id
+// Function to toggle window based on dev id
 function showWindow(windowId) {
     $('#' + windowId).toggle();
     var ht = Math.floor(Math.random() * (screen.height - 500)) + 100; // -500 so that it doesnt spawn half outside, and +100 as offset to see the logos
