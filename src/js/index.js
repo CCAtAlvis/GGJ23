@@ -6,8 +6,9 @@ function showWindow(windowId) {
     var ht = Math.floor(Math.random() * (screen.height - 500)) + 100; // -500 so that it doesnt spawn half outside, and +100 as offset to see the logos
     var w = Math.floor(Math.random() * (screen.width - 500)) + 100;
     $("#" + windowId).css({ top: ht, left: w, position: 'absolute' });
-}
+};
 
+$("#window-prompt").css({top: 50, left: (screen.width - 180)});
 
 for (i = 0; i < windowsList.length; i++) {
     currWindow = windowsList[i];
@@ -17,4 +18,4 @@ for (i = 0; i < windowsList.length; i++) {
     var ht = Math.floor(Math.random() * (screen.height - 500)) + 100; // -500 so that it doesnt spawn half outside, and +100 as offset to see the logos
     var w = Math.floor(Math.random() * (screen.width - 500)) + 100;
     $("#" + currWindow).css({ top: ht, left: w, position: 'absolute' });
-}
+};
