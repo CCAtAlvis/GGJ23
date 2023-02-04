@@ -8,7 +8,12 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="../css/index.css" />
-    <link rel="stylesheet" href="../css/wallpaper.css">
+    <link rel="stylesheet" href="../css/wallpaper.css" />
+    <link rel="stylesheet" href="../css/terminal.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/jquery.terminal@2.x.x/js/jquery.terminal.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/jquery.terminal@2.x.x/css/jquery.terminal.min.css"/>
 </head>
 
 <body>
@@ -36,7 +41,7 @@
         <div id="window" class="ad">
             <div class="box draggable" id="window-help">
                 <heading class="box__heading draggableHeader">
-                    <div class="box__close"> x </div>
+                    <div class="box__close pointer"> x </div>
                     <span>Design</span>
                 </heading>
 
@@ -58,7 +63,7 @@
                 </div>
             </div>
 
-            <div class="box draggable" id="window-mail"">
+            <div class="box draggable" id="window-mail">
                 <heading class="box__heading draggableHeader">
                     <div class="box__close"> X </div>
                     <span>Mail</span>
@@ -111,14 +116,22 @@
                     </div>
                 </div>
             </div>
+
+            <div class="box draggable" id="window-terminal">
+                <heading class="box__heading draggableHeader">
+                    <div class="box__close pointer"> x </div>
+                    <span>SynthTerm</span>
+                </heading>
+
+                <div class="box__content" id="terminal"></div>
+            </div>
         </div>
 
-        <script src="https://code.jquery.com/jquery-3.6.3.min.js"
-            integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
         <script src="../js/index.js"></script>
         <script src="../js/window.js"></script>
         <script src="../js/wallpaper.js"></script>
         <script src="../js/mail.js"></script>
+        <script src="../js/terminal.js"></script>
 </body>
 
 </html>
