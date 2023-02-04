@@ -12,25 +12,22 @@ let news = [
 
 $('#news').hide();
 
-$.getJSON("../data/news.json", function (data) {
-    news = data;
-    data.forEach(email => {
-        let emailElement = `
-        <div class="pointer">
-            <li class="message inherit-pointer" id="${email.uid}" onclick=openNews(this.id)>
-               
-                <div>
-                    <div>${email.heading}</div>
-                    <div class="date">${email.timeToRead}</div>
-                    <div class="date">${email.date}</div>
-                  </div>
-            </li>
-        </div>
-    `
-        if (email.visible) {
-            $("#news-listing").append(emailElement);
-        }
-    })
+news.forEach(article => {
+    let newsElement = `
+    <div class="pointer">
+        <li class="message inherit-pointer" id="${article.uid}" onclick=openNews(this.id)>
+           
+            <div>
+                <div>${article.heading}</div>
+                <div class="date">${article.timeToRead}</div>
+                <div class="date">${article.date}</div>
+              </div>
+        </li>
+    </div>`;
+
+    if (article.visible) {
+        $("#news-listing").append(newsElement);
+    }
 });
 
 function openNews(id) {

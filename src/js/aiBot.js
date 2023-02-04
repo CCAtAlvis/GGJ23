@@ -10,4 +10,3 @@ function tirggerAiBot(data) {
     aiBotBox.style.display = 'block';
     aiBottextContainer.textContent = aiBotTexts[data.id];
 }
-tirggerAiBot(1);
