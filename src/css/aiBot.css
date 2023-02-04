@@ -109,3 +109,9 @@ body {
         transform: rotateY(180deg) skew(14deg) rotate3d(1.1, 1, 0.9, 360deg);
     }
 }
+
+#ai-container .box {
+    right: 10px;
+    bottom: 50px;
+    width: 200px;
+}
