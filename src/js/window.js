@@ -97,3 +97,7 @@ function makeCloseble(element) {
 //     var w = Math.floor(Math.random() * (screen.width - 500)) + 100;
 //     $("#" + currWindow).css({ top: ht, left: w, position: 'absolute' });
 // }
+
+function exitTerminal(){
+  $("#window-terminal").hide();
+}
