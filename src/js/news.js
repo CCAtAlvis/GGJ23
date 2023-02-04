@@ -6,7 +6,7 @@ $.getJSON("../data/news.json", function (data) {
     data.forEach(email => {
         let emailElement = `
         <div class="pointer">
-            <li class="message inherit-pointer" id="${email.uid}" onclick=openMail(this.id)>
+            <li class="message inherit-pointer" id="${email.uid}" onclick=openNews(this.id)>
                
                 <div>
                     <div>${email.heading}</div>
@@ -23,7 +23,7 @@ $.getJSON("../data/news.json", function (data) {
 
 });
 
-function openMail(id) {
+function openNews(id) {
     let singleNews = news.find(el => el.uid === id);
     $('#news-container').hide();
     $('#news').show();

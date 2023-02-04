@@ -4,21 +4,19 @@ const terminalWindow = $('#terminal');
 
 var term = terminalWindow.terminal(function(command, term) {
     var cmd = $.terminal.parse_command(command);
-
     if (cmd.name === 'exit') {
-        exit();
+        console.log(term.get_prompt()=="SynthOS> ",term.get_prompt(),"SynthOS> ")
+       if(term.get_prompt()=="SynthOS> "){
+            exitTerminal();
+       }else{
+            term.set_prompt("SynthOS> ");
+       }
+       
     } else if (cmd.name === 'echo') {
         term.echo(cmd.rest);
     } else if (command !== '') {
         try {
-            var result = "__EVAL(command)";
-            if (result && result instanceof $.fn.init) {
-                term.echo('<#jQuery>');
-            } else if (result && typeof result === 'object') {
-                tree(result);
-            } else if (result !== undefined) {
-                term.echo(new String(result));
-            }
+            processCommands(cmd);
         } catch(e) {
             term.error(new String(e));
         }

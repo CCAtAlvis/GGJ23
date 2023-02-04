@@ -68,3 +68,7 @@ function makeCloseble(element) {
     parent.style.display = "none";
   }
 }
+
+function exitTerminal(){
+  $("#window-terminal").hide();
+}
