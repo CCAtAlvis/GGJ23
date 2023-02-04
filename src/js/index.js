@@ -1,8 +1,8 @@
 windowsList = ["window-mail", "window-help", "window-profile"]
 
-// Function to show window based on dev id
+// Function to toggle window based on dev id
 function showWindow(windowId) {
-    $('#' + windowId).show();
+    $('#' + windowId).toggle();
 }
 
 
