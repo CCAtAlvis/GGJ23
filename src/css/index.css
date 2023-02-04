@@ -94,6 +94,12 @@ body {
     background-color: #fff;
 }
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .inline {
   max-width: 250px;
   padding: 5px;
