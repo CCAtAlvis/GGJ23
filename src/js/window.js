@@ -5,6 +5,7 @@ draggable.forEach((e) => {
 });
 
 let topZindex = 110;
+let topWindow = '';
 function dragElement(elmnt) {
   let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
   let draggableHeaders = elmnt.querySelectorAll(".draggableHeader");
@@ -68,6 +69,34 @@ function makeCloseble(element) {
     parent.style.display = "none";
   }
 }
+
+
+// const windowsList = ["window-mail", "window-help", "window-profile" , "window-news", "window-terminal"];
+
+// // Function to toggle window based on dev id
+// function showWindow(windowId) {
+//   if (topWindow === windowId) {
+
+//   } else {
+    
+//   }
+
+//     $('#' + windowId).toggle();
+//     var ht = Math.floor(Math.random() * (screen.height - 500)) + 100; // -500 so that it doesnt spawn half outside, and +100 as offset to see the logos
+//     var w = Math.floor(Math.random() * (screen.width - 500)) + 100;
+//     $("#" + windowId).css({ top: ht, left: w, position: 'absolute' });
+// }
+
+
+// for (i = 0; i < windowsList.length; i++) {
+//     currWindow = windowsList[i];
+//     // Hide all windows on load
+//     $("#" + currWindow).hide();
+//     // Spawn all windows in random locations
+//     var ht = Math.floor(Math.random() * (screen.height - 500)) + 100; // -500 so that it doesnt spawn half outside, and +100 as offset to see the logos
+//     var w = Math.floor(Math.random() * (screen.width - 500)) + 100;
+//     $("#" + currWindow).css({ top: ht, left: w, position: 'absolute' });
+// }
 
 function exitTerminal(){
   $("#window-terminal").hide();
