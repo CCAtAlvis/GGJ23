@@ -19,3 +19,5 @@ for (i = 0; i < windowsList.length; i++) {
     var w = Math.floor(Math.random() * (screen.width - 500)) + 100;
     $("#" + currWindow).css({ top: ht, left: w, position: 'absolute' });
 };
+startEvent(1);
+startEvent(2);

@@ -1,30 +1,18 @@
-let emails;
+let emails = [
+    {
+        "uid" : "1",
+        "from" : "Unknown",
+        "fromMail" : "unknown@xyz.com",
+        "toMail" : "synthai@gmail.com",
+        "heading" : "Don't click on this mail....",
+        "message" : "As Expected you have clicked on this mail. Well as you have clicked on this mail let me help you with your goal.I came across this IP address - 186.255.190.185 try to find out the owner of the IP by doing this you will be one step closer to your target.",
+        "date" : "Mar 5",
+        "image" : "../images/img_avatar.png",
+        "visible" : true
+    }
+]
+;
 $('#mail').hide();
-$.getJSON("../data/mail.json", function (data) {
-    emails = data;
-    data.forEach(email => {
-        let emailElement = `
-        <div class="pointer">
-            <li class="message inherit-pointer" id="${email.uid}" onclick=openMail(this.id)>
-                <div class="mail-grid inherit-pointer">
-                <img class="inherit-pointer" src="${email.image}" alt="Avatar">
-                <div>
-                    <div class="date">${email.date}</div>
-                    <div class="name">${email.from}</div>
-                    <div class="message-content">
-                    ${email.heading}
-                    </div>
-                </div>
-                </div>
-            </li>
-        </div>
-    `
-        if (email.visible) {
-            $("#mails-inbox").append(emailElement);
-        }
-    });
-});
-
 function openMail(id) {
     let email = emails.find(el => el.uid === id);
     $('#inbox').hide();
@@ -32,7 +20,7 @@ function openMail(id) {
     let emailElement = `
     <div id="mail-body">
         <h1 id="mailbox-header" >
-            <a class="back-button" onclick=goback()><</a>
+            <a class="back-button pointer" onclick=gobackMail()><</a>
             ${email.heading}
         </h1>
         <div class="mailbox-list">
@@ -55,11 +43,35 @@ function openMail(id) {
     `
 
     $("#mail").append(emailElement);
-    console.log(email);
 }
 
-function goback() {
+function gobackMail() {
     $("#mail-body").remove();
     $('#inbox').show();
     $('#mail').hide();
 }
+
+function renderMail(){
+    emails.forEach(email => {
+        let emailElement = `
+        <div class="pointer">
+            <li class="message inherit-pointer" id="${email.uid}" onclick=openMail(this.id)>
+                <div class="mail-grid inherit-pointer">
+                <img class="inherit-pointer" src="${email.image}" alt="Avatar">
+                <div>
+                    <div class="date">${email.date}</div>
+                    <div class="name">${email.from}</div>
+                    <div class="message-content">
+                    ${email.heading}
+                    </div>
+                </div>
+                </div>
+            </li>
+        </div>
+    `
+        if (email.visible) {
+            $("#mails-inbox").append(emailElement);
+        }
+    });
+}
+renderMail();

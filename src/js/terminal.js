@@ -5,7 +5,6 @@ const terminalWindow = $('#terminal');
 var term = terminalWindow.terminal(function(command, term) {
     var cmd = $.terminal.parse_command(command);
     if (cmd.name === 'exit') {
-        console.log(term.get_prompt()=="SynthOS> ",term.get_prompt(),"SynthOS> ")
        if(term.get_prompt()=="SynthOS> "){
             exitTerminal();
        }else{
@@ -29,10 +28,6 @@ var term = terminalWindow.terminal(function(command, term) {
     enabled: $('body').attr('onload') === undefined,
     onInit: function() {
         this.echo('Type [[b;#fff;]exit] to see turn off animation.');
-
-        console.log( terminalWindow.height());
-        console.log( terminalWindow.width());
-
         scanlines[0].style.setProperty("height", terminalWindow.height());
         scanlines[0].style.setProperty("width", terminalWindow.width());
     },

@@ -41,7 +41,6 @@ let lsCommands = {
 }
 function processCommands(command) {
     var result = "command not found";
-    console.log(command.name)
     if (command.name === "ssh") {
         if (command.args.length > 1) {
             throw Error('invalid arguments');
@@ -56,7 +55,6 @@ function processCommands(command) {
         }
     }
     else if (command.name === "ls") {
-        console.log(lsCommands[loggedIP]);
         let path = currentPath.split(".");
         let files = lsCommands[loggedIP];
         path.forEach(folder => {
@@ -78,7 +76,6 @@ function processCommands(command) {
         term.echo(currentPath.replaceAll(".", "/").replaceAll("//", "/"));
     }
     else if (command.name === "cd") {
-        console.log(command.args[0])
         if (command.args.length > 1) {
             throw Error('invalid arguments');
         }
@@ -95,7 +92,6 @@ function processCommands(command) {
                 let files = lsCommands[loggedIP];
                 currentPathChanges.forEach(folder => {
                     files = files[folder];
-                    console.log(files)
                     if (!files) {
                         throw Error("Path is wrong");
                     }
