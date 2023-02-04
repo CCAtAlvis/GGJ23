@@ -1,7 +1,7 @@
 let sshCommands = {
     "root@186.255.190.185": {
-        prompt: "root@186.255.190.185 ~> ",
-        path: "users.root"
+        prompt: "root@186.255.190.185> ",
+        path: "/"
     }
 }
 let loggedIP = "SynthOS";
@@ -35,6 +35,38 @@ let lsCommands = {
                 "file1": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
                 "file2": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" }
             }
+
+        }
+    },
+    "root@186.255.190.185": {
+        "/": {
+            "users": {
+                "name": {
+                    "documents": {
+                        "1.txt": {
+                            isFile: true,
+                            "text": "TODO:\n1.Watch One Piece new episode\n2.Finish office work\n3.Learn new things."
+                        }
+                    },
+                    "office": {
+                        "final.pptx": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
+                        "id.png": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
+                        "ssh.pem": {
+                            isFile: true,
+                            "text": "SSH-12345kdsonsdpodonJOSDHohDSnoD"
+                        }
+                    }
+                }
+            },
+            "bin": {
+                "c++": { isFile: true, text: "asxdvfdnjcBUCSBVKCvaUCviyvcyv" },
+                "node": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" }
+            },
+            "~": {
+                "file1": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
+                "file2": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" }
+            },
+            ".history" :{isFile : true , text : "cd ..\nmongo\nnode index.js\nclear\nclear\ngit reset --hard\nset password helloworld" }
 
         }
     }
