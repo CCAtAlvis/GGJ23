@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Game</title>
 
     <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="../css/wallpaper.css" />
@@ -35,6 +35,8 @@
                 <img src="../images/mail.jpg" onclick="showWindow('window-mail')">
                 <br>
                 <img src="../images/help.jpg" onclick="showWindow('window-help')">
+                <br>
+                <img src="../images/news.jpg" onclick="showWindow('window-news')">
             </div>
         </div>
 
@@ -80,6 +82,23 @@
                 </div>
             </div>
 
+            <div class="box draggable" id="window-news">
+                <heading class="box__heading draggableHeader">
+                    <div class="box__close"> X </div>
+                    <span>News</span>
+                </heading>
+                <div class="box__content message-box" id="news">
+
+                </div>
+                <div class="box__content message-box" id="news-container">
+                    <h1 id="mailbox-header" style="">Today's Special News</h1>
+                    <div class="mailbox-list">
+                        <ul class="message-list" id="news-listing">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
             <div class="box draggable" id="window-profile">
                 <heading class="box__heading draggableHeader">
                     <div class="box__close"> x </div>
@@ -91,7 +110,7 @@
                     <div class="mailbox-list">
                         <li class="message">
                             <div>
-                                <centre><img src="../images/img_avatar.png" alt="Avatar"></centre>
+                                <img src="../images/img_avatar.png" alt="Avatar" class="center">
                                 <div>
                                     <b>Name:</b>
                                     <div class="name">Connor Hewitt</div>
@@ -132,6 +151,7 @@
         <script src="../js/wallpaper.js"></script>
         <script src="../js/mail.js"></script>
         <script src="../js/terminal.js"></script>
+        <script src="../js/news.js"></script>
 </body>
 
 </html>
