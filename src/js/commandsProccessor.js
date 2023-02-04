@@ -87,7 +87,8 @@ function processCommands(command) {
             if (path === ".." && currentPath.lastIndexOf(".") != -1) {
                 currentPath = currentPath.replace(currentPath.substring(currentPath.lastIndexOf("."), currentPath.length), "");
             }
-            else{
+            else if (path === ".") { }
+            else {
                 let currentPathChanges = currentPath.split(".");
                 let files = lsCommands[loggedIP];
                 currentPathChanges.forEach(folder => {
@@ -99,15 +100,43 @@ function processCommands(command) {
                         throw Error(`cd : ${folder} is not directory`);
                     }
                 })
-                if(files[path] && !files[path].isFile){
+                if (files[path] && !files[path].isFile) {
                     currentPath = currentPath + "." + path;
                 }
-                else{
+                else {
                     throw Error(`cd : ${path} is not directory`);
                 }
             }
         })
 
+    }
+    else if (command.name === "cat") {
+        if (command.args.length > 1) {
+            throw Error('invalid arguments');
+        }
+        else if (!command.args[0]) {
+            throw Error('please provide valid file name');
+        }
+        else {
+            let path = currentPath.split(".");
+            let files = lsCommands[loggedIP];
+            path.forEach(folder => {
+                files = files[folder];
+                if (!files) {
+                    throw Error("Path is wrong");
+                }
+                if (files.isFile == true) {
+                    throw Error(`cd : ${folder} is not directory`);
+                }
+            })
+            if(files[command.args[0]].isFile){
+                term.echo(files[command.args[0]].text);
+            }    
+            else{
+                throw Error("Invalid File")
+            }
+
+        }
     }
     else if (result && result instanceof $.fn.init) {
         term.echo('<#jQuery>');

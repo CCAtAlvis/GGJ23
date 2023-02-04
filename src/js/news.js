@@ -49,6 +49,7 @@ function gobackNews() {
 
 
 function renderNews(){
+    $("#news-listing").empty();
     news.forEach(email => {
         let emailElement = `
             <div class="pointer">

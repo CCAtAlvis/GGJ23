@@ -52,6 +52,7 @@ function gobackMail() {
 }
 
 function renderMail(){
+    $("#mails-inbox").empty();
     emails.forEach(email => {
         let emailElement = `
         <div class="pointer">
