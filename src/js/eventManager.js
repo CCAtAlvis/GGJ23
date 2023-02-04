@@ -13,7 +13,7 @@ let sendNews = (data) => {
     foundNews.visible = true;
     console.log(foundNews)
 }
-
+let currentState = 1;
 let events = {
     1: [
         {
@@ -49,16 +49,57 @@ let events = {
                 delay: 3000
             }
         },
+    ],
+    4 : [
+        {
+            action: tirggerAiBot,
+            data: {
+                id: 2
+            }
+        },
+    ],
+    5: [
+        {
+            action: tirggerAiBot,
+            data: {
+                id: 3
+            }
+        },
+    ],
+    6: [
+        {
+            action: tirggerAiBot,
+            data: {
+                id: 4
+            }
+        },
+    ],
+    7: [
+        {
+            action: tirggerAiBot,
+            data: {
+                id: 5
+            }
+        },
+    ],
+    8: [
+        {
+            action: tirggerAiBot,
+            data: {
+                id: 6
+            }
+        },
     ]
 
 }
 
 function startEvent(id) {
     let eventToBeTriggered = events[id];
-
-    eventToBeTriggered.forEach(event => {
-        if(event.isDone)return;
-        event.isDone = true;
+    if(!eventToBeTriggered) return;
+eventToBeTriggered.forEach(event => {
+        if(currentState>id)return;
+        if(id-currentState>1)return;
+        currentState = id;
         if (event?.data?.delay) {
             setTimeout( ()=>{event.action(event.data)}, event.data.delay);
 

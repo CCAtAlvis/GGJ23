@@ -8,6 +8,8 @@ var term = terminalWindow.terminal(function(command, term) {
        if(term.get_prompt()=="SynthOS> "){
             exitTerminal();
        }else{
+        loggedIP = "SynthOS";
+        currentPath = "/.bin";
             term.set_prompt("SynthOS> ");
        }
        

@@ -151,6 +151,9 @@ function processCommands(command) {
                     throw Error("Password is wrong");
                 }
             }
+            if(command.args[0] == "root@186.255.190.185"){
+                startEvent(8);
+            }
             loggedIP = command.args[0];
             currentPath = sshCommands[command.args[0]].path;
             term.set_prompt(sshCommands[command.args[0]].prompt);
@@ -172,9 +175,14 @@ function processCommands(command) {
         Object.keys(files).forEach(file => {
             targetFiles = targetFiles + " " + file;
         })
+        startEvent(6);
+        if(loggedIP == "root@186.255.190.185"){
+            startEvent(9);
+        }
         term.echo(targetFiles);
     }
     else if (command.name === "pwd") {
+        startEvent(5);
         term.echo(currentPath.replaceAll(".", "/").replaceAll("//", "/"));
     }
     else if (command.name === "cd") {
@@ -210,7 +218,7 @@ function processCommands(command) {
                 }
             }
         })
-
+        startEvent(7);
     }
     else if (command.name === "cat") {
         if (command.args.length > 1) {

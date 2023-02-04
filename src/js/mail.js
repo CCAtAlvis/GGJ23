@@ -1,5 +1,16 @@
 let emails = [
     {
+        "uid" : "2",
+        "from" : "Arthur",
+        "fromMail" : "arthur@gmail.com",
+        "toMail" : "lufi@gmail.com",
+        "heading" : "",
+        "message" : `I have loaded information in your synth bot, it will help you understand the further steps. I’ll try to find some more evidence in this matter.`,
+        "date" : "April 09, 3403",
+        "image" : "../images/img_avatar.png",
+        "visible" : false
+    },
+    {
         "uid" : "1",
         "from" : "Arthur",
         "fromMail" : "arthur@gmail.com",
@@ -17,17 +28,6 @@ let emails = [
         
         But time is of the essence, and the stakes are higher than ever before. Are you prepared to take on this challenge? The fate of humanity rests in our hands.
         `,
-        "date" : "April 09, 3403",
-        "image" : "../images/img_avatar.png",
-        "visible" : false
-    },
-    {
-        "uid" : "2",
-        "from" : "Arthur",
-        "fromMail" : "arthur@gmail.com",
-        "toMail" : "lufi@gmail.com",
-        "heading" : "Weak link",
-        "message" : `I've found a way into the Omega System network. The IP 186.255.190.185 is vulnerable and can be accessed without a password. Time is running out.`,
         "date" : "April 09, 3403",
         "image" : "../images/img_avatar.png",
         "visible" : false
