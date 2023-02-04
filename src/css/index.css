@@ -10,7 +10,6 @@
 *{
     margin: auto;
     padding: 0;
-    cursor: default;
 }
 
 body {
@@ -126,17 +125,24 @@ body {
   margin: 0;
 }
 .message {
-    border: 1px solid #bbb;
-    padding-left: 20px;
-    cursor:pointer; 
+  border: 1px solid #bbb;
+  padding-left: 20px;
+}
+
+.pointer{
+  cursor:pointer; 
+}
+.inherit-pointer{
+  cursor: inherit;
 }
 .date {
-  font-size: 12px;
+  font-size: 14px;
   color: #999;
 }
 
 .name {
-  padding: 6px 0px;
+  font-size: 14px;
+  color: #999;
 }
 .message-content {
   text-overflow: ellipsis;
@@ -162,7 +168,9 @@ body {
     position: relative;
     height: 500px;
 }
-
+#mail-body .mailbox-list{
+  padding-top: 10px;
+}
 .message-box{
     height: 500px;
 }
@@ -176,4 +184,14 @@ img {
   display: inline-flex;
   flex-wrap: nowrap;
   gap: 40px;
+}
+
+.back-button{
+  float: left;
+  padding-left: 20px
+}
+.email-messssage{
+  overflow-y: scroll;
+  height: 200px;
+  width: 90%;
 }
