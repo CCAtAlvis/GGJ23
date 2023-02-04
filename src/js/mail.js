@@ -23,7 +23,6 @@ $.getJSON("../data/mail.json", function (data) {
             $("#mails-inbox").append(emailElement);
         }
     });
-
 });
 
 function openMail(id) {

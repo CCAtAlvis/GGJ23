@@ -1,9 +1,29 @@
 [
     {
+        "id": 1,
+        "imgSrc": "../images/img_avatar.png",
         "name": "Barath",
         "dob": "01-01-1970",
         "bio": "I am Connor Hewitt, a market analyst.",
         "email": "connor@haxker.com",
-        "phone": "../images/img_avatar.png"
+        "phone": 9090990990
+    },
+    {
+        "id": 2,
+        "imgSrc": "../images/img_avatar.png",
+        "name": "Chinmay",
+        "dob": "01-01-1970",
+        "bio": "I am Connor Hewitt, a market analyst.",
+        "email": "connor@haxker.com",
+        "phone": 9090990990
+    },
+    {
+        "id": 3,
+        "imgSrc": "../images/img_avatar.png",
+        "name": "Mithil",
+        "dob": "01-01-1970",
+        "bio": "I am Connor Hewitt, a market analyst.",
+        "email": "connor@haxker.com",
+        "phone": 9090990990
     }
 ]

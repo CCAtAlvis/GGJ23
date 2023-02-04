@@ -1,6 +1,5 @@
 let news;
 $('#news').hide();
-console.log("hellothere")
 $.getJSON("../data/mail.json", function (data) {
     news = data;
     data.forEach(email => {
