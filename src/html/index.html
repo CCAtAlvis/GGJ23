@@ -30,6 +30,8 @@
                 <img src="../images/mail.jpg" onclick="showWindow('window-mail')">
                 <br>
                 <img src="../images/help.jpg" onclick="showWindow('window-help')">
+                <br>
+                <img src="../images/news.jpg" onclick="showWindow('window-news')">
             </div>
         </div>
 
@@ -70,6 +72,23 @@
                     <h1 id="mailbox-header" style="">Inbox</h1>
                     <div class="mailbox-list">
                         <ul class="message-list" id="mails-inbox">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box draggable" id="window-news"">
+                <heading class="box__heading draggableHeader">
+                    <div class="box__close"> X </div>
+                    <span>News</span>
+                </heading>
+                <div class="box__content message-box" id="news">
+
+                </div>
+                <div class="box__content message-box" id="news-container">
+                    <h1 id="mailbox-header" style="">Today's Special News</h1>
+                    <div class="mailbox-list">
+                        <ul class="message-list" id="news-listing">
                         </ul>
                     </div>
                 </div>
@@ -119,6 +138,7 @@
         <script src="../js/window.js"></script>
         <script src="../js/wallpaper.js"></script>
         <script src="../js/mail.js"></script>
+        <script src="../js/news.js"></script>
 </body>
 
 </html>

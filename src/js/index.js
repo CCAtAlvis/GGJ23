@@ -1,9 +1,11 @@
-windowsList = ["window-mail", "window-help", "window-profile"]
+windowsList = ["window-mail", "window-help", "window-profile" , "window-news"]
 
 // Function to show window based on dev id
 function showWindow(windowId) {
     $('#' + windowId).toggle();
-    $('#' + windowId).css({top : "125px" , left : "250px"});
+    var ht = Math.floor(Math.random() * (screen.height - 500)) + 100; // -500 so that it doesnt spawn half outside, and +100 as offset to see the logos
+    var w = Math.floor(Math.random() * (screen.width - 500)) + 100;
+    $("#" + windowId).css({ top: ht, left: w, position: 'absolute' });
 }
 
 
