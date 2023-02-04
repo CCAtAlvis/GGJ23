@@ -5,7 +5,6 @@ const terminalWindow = $('#terminal');
 var term = terminalWindow.terminal(function(command, term) {
     var cmd = $.terminal.parse_command(command);
     if (cmd.name === 'exit') {
-        console.log(term.get_prompt()=="SynthOS> ",term.get_prompt(),"SynthOS> ")
        if(term.get_prompt()=="SynthOS> "){
             exitTerminal();
        }else{

@@ -101,3 +101,7 @@ function makeCloseble(element) {
 function exitTerminal(){
   $("#window-terminal").hide();
 }
+
+function triggerAlert(alertType){
+  
+}
