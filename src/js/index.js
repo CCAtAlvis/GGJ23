@@ -1,4 +1,4 @@
-windowsList = ["window-mail", "window-help", "window-profiles" , "window-news", "window-terminal"]
+windowsList = ["window-mail", "window-help", "window-profile" , "window-news", "window-terminal"]
 
 // Function to toggle window based on dev id
 function showWindow(windowId) {
