@@ -1679,7 +1679,8 @@
             "medium": "https://randomuser.me/api/portraits/med/men/70.jpg",
             "thumbnail": "https://randomuser.me/api/portraits/thumb/men/70.jpg"
         },
-        "id": 57
+        "id": 57,
+        "bio" : "JR. Network Engineer by profession, Hobbies involves reading books , cycling and sleeping"
     },
     {
         "gender": "male",

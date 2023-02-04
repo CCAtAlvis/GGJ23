@@ -19,7 +19,7 @@ let emails = [
         `,
         "date" : "April 09, 3403",
         "image" : "../images/img_avatar.png",
-        "visible" : true
+        "visible" : false
     },
     {
         "uid" : "2",
@@ -27,16 +27,22 @@ let emails = [
         "fromMail" : "arthur@gmail.com",
         "toMail" : "lufi@gmail.com",
         "heading" : "Weak link",
-        "message" : `I've found a way into the Omega System network. The IP 192.168.0.100 is vulnerable and can be accessed without a password. Time is running out.`,
+        "message" : `I've found a way into the Omega System network. The IP 186.255.190.185 is vulnerable and can be accessed without a password. Time is running out.`,
         "date" : "April 09, 3403",
         "image" : "../images/img_avatar.png",
-        "visible" : true
+        "visible" : false
     },
 ]
 ;
 $('#mail').hide();
 function openMail(id) {
     let email = emails.find(el => el.uid === id);
+    if(id==1){
+        startEvent(2);
+    }
+    if(id==2){
+        startEvent(3);
+    }
     $('#inbox').hide();
     $('#mail').show();
     let emailElement = `

@@ -19,7 +19,7 @@ let events = {
         {
             action: sendMail,
             data: {
-                mailId: 1
+                mailId: 1,
             }
         },
         {
@@ -28,23 +28,43 @@ let events = {
     ],
     2: [
         {
-            action: sendNews,
+            action: sendMail,
             data: {
-                newsId: 1
+                mailId: 2,
+                delay : 3000
             }
         },
         {
-            action: renderNews
+            action: renderMail,
+            data : {
+                delay : 3500
+            }
         }
+    ],
+    3: [
+        {
+            action: tirggerAiBot,
+            data: {
+                id: 1,
+                delay: 3000
+            }
+        },
     ]
 
 }
 
 function startEvent(id) {
     let eventToBeTriggered = events[id];
-    
-    eventToBeTriggered.forEach(event=>{
-        event.action(event.data);
+
+    eventToBeTriggered.forEach(event => {
+        if(event.isDone)return;
+        event.isDone = true;
+        if (event?.data?.delay) {
+            setTimeout( ()=>{event.action(event.data)}, event.data.delay);
+
+        } else {
+            event.action(event.data);
+        }
     })
-    
+
 }

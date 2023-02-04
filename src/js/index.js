@@ -20,4 +20,3 @@ for (i = 0; i < windowsList.length; i++) {
     $("#" + currWindow).css({ top: ht, left: w, position: 'absolute' });
 };
 startEvent(1);
-startEvent(2);

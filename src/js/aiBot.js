@@ -1,12 +1,12 @@
 const aiBotTexts = {
-    1: 'some random text',
+    1: 'Well lets try to connect to the ip present in the mail seems like a solid lead',
     2: 'some more text goes here'
 };
 
 const aiBotBox = document.querySelector("#ai-container .box");
 const aiBottextContainer = document.querySelector("#ai-container .box__content");
 
-function tirggerAiBot(index) {
+function tirggerAiBot(data) {
     aiBotBox.style.display = 'block';
-    aiBottextContainer.textContent = aiBotTexts[index];
+    aiBottextContainer.textContent = aiBotTexts[data.id];
 }
