@@ -102,6 +102,28 @@ function exitTerminal(){
   $("#window-terminal").hide();
 }
 
-function triggerAlert(alertType){
-  
+function closePrompt(e) {
+  const parent = $(e.parentElement.parentElement)
+  parent.slideUp(() => {
+    parent.remove();
+  });
+}
+
+const promptWindow = $("#window-prompt");
+function triggerAlert(alertType) {
+  let alertMessage = 'You have a new email';
+
+  if (alertType === 'news') {
+    alertMessage = 'new news!';
+  }
+
+  const element = `<div class="box prompt">
+  <heading class="box__heading">
+      <div class="box__close" onclick=closePrompt(this)> x </div>
+      <span>Alert</span>
+  </heading>
+  <div> ${alertMessage}</div>
+  </div>`;
+
+  promptWindow.prepend(element);
 }
