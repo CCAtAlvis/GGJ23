@@ -91,6 +91,7 @@ body {
 
 .box__content {
     background-color: #fff;
+    position: relative;
 }
 
 .center {
