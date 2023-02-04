@@ -8,7 +8,7 @@ function search() {
 
         matchedProfiles = data.filter(profile => {
             let name = profile.name.toLowerCase();
-            if (text != "" && name.startsWith(text.toLowerCase()))
+            if (name.startsWith(text.toLowerCase()))
                 return profile;
         });
 
