@@ -171,3 +171,8 @@ img {
   flex-wrap: nowrap;
   gap: 40px;
 }
+
+.back-button{
+  float: left;
+  padding-left: 20px
+}

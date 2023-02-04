@@ -15,7 +15,9 @@ $.getJSON("../data/mail.json", function (data) {
         </div>
     </div>
     </li>`
-        $("#mails-inbox").append(emailElement);
+        if (email.visible) {
+            $("#mails-inbox").append(emailElement);
+        }
     });
 
 });
@@ -25,16 +27,29 @@ function openMail(id) {
     $('#inbox').hide();
     $('#mail').show();
     let emailElement = `
-    <h1 id="mailbox-header" >${email.heading}</h1>
-                    <div class="mailbox-list">
-                        <div>
-                            <div class="date">${email.date}</div>
-                            <div class="name">${email.from}</div>
-                        </div>
-                        <li class="message">
-                            ${email.message}
-                        </li>
-                    </div>`
+    <div id="mail-body">
+    <h1 id="mailbox-header" >
+    <a class="back-button" onclick=goback()><</a>
+    ${email.heading}
+    </h1>
+        <div class="mailbox-list">
+            <div>
+                <div class="date">${email.date}</div>
+                <div class="name">${email.from}</div>
+            </div>
+            <li class="message">
+                ${email.message}
+            </li>
+        </div>
+    </div>
+    `
+
     $("#mail").append(emailElement);
     console.log(email);
+}
+
+function goback() {
+    $("#mail-body").remove();
+    $('#inbox').show();
+    $('#mail').hide();
 }
