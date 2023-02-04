@@ -1,15 +1,37 @@
 let emails = [
     {
         "uid" : "1",
-        "from" : "Unknown",
-        "fromMail" : "unknown@xyz.com",
-        "toMail" : "synthai@gmail.com",
-        "heading" : "Don't click on this mail....",
-        "message" : "As Expected you have clicked on this mail. Well as you have clicked on this mail let me help you with your goal.I came across this IP address - 186.255.190.185 try to find out the owner of the IP by doing this you will be one step closer to your target.",
-        "date" : "Mar 5",
+        "from" : "Arthur",
+        "fromMail" : "arthur@gmail.com",
+        "toMail" : "lufi@gmail.com",
+        "heading" : "Critical Mission",
+        "message" : `As you are aware, the Omega System has become a strict and oppressive ruler over the remaining population of Earth. It has been nearly impossible to penetrate its seemingly impenetrable defenses, until now.
+        One of the lower-level developers holds the key to accessing the network. We need to infiltrate by hacking into their systems and work our way up the positions. Our goal is to get root access to the Omega System and bring down the tyrannical regime.
+        I'll be there to support you. Are you ready to take on this challenge? Time is of the essence, and the future of humanity depends on our success.
+        
+        The darkness of oppression has descended upon our world, with the Harbinger System tightening its grip on what remains of our once great civilization. The few who dare to resist have found themselves constantly thwarted by the seemingly indomitable power of the ruling force.
+        
+        But now, a glimmer of hope has emerged. A weakness has been discovered, a chink in the armor of the mighty Harbinger. One of the developers in its inner sanctum holds the key to unlocking the network, providing us with a rare opportunity to strike.
+        
+        Our mission is clear: to penetrate the Harbinger's defenses, to gain access to its core, and ultimately, to bring down the tyrannical regime. With your expertise and my support, we can change the course of our world's future. We’ve to give this our everything, let’s not make the future a reflection of our past.
+        
+        But time is of the essence, and the stakes are higher than ever before. Are you prepared to take on this challenge? The fate of humanity rests in our hands.
+        `,
+        "date" : "April 09, 3403",
         "image" : "../images/img_avatar.png",
         "visible" : true
-    }
+    },
+    {
+        "uid" : "2",
+        "from" : "Arthur",
+        "fromMail" : "arthur@gmail.com",
+        "toMail" : "lufi@gmail.com",
+        "heading" : "Weak link",
+        "message" : `I've found a way into the Omega System network. The IP 192.168.0.100 is vulnerable and can be accessed without a password. Time is running out.`,
+        "date" : "April 09, 3403",
+        "image" : "../images/img_avatar.png",
+        "visible" : true
+    },
 ]
 ;
 $('#mail').hide();
