@@ -17,6 +17,17 @@
 </head>
 
 <body>
+<template id="terminal-greetings">
+ _______           _       _________         _________ _______  _______  _______ 
+(  ____ \|\     /|( (    /|\__   __/|\     /|\__   __/(  ____ \(  ____ )(       )
+| (    \/( \   / )|  \  ( |   ) (   | )   ( |   ) (   | (    \/| (    )|| () () |
+| (_____  \ (_) / |   \ | |   | |   | (___) |   | |   | (__    | (____)|| || || |
+(_____  )  \   /  | (\ \) |   | |   |  ___  |   | |   |  __)   |     __)| |(_)| |
+      ) |   ) (   | | \   |   | |   | (   ) |   | |   | (      | (\ (   | |   | |
+/\____) |   | |   | )  \  |   | |   | )   ( |   | |   | (____/\| ) \ \__| )   ( |
+\_______)   \_/   |/    )_)   )_(   |/     \|   )_(   (_______/|/   \__/|/     \|
+</template>
+
     <div id="gamescreen">
         <div id="wallpaper">
             <div id="neon"><span>Synth</span><span>OS</span></div>
@@ -127,7 +138,12 @@
                     <span>SynthTerm</span>
                 </heading>
 
-                <div class="box__content" id="terminal"></div>
+                <div class="box__content">
+                    <div id="terminal"></div>
+                    <div class="flicker"></div>
+                    <div class="scanlines"></div>
+                    <div class="noise"></div>    
+                </div>
             </div>
         </div>
 
