@@ -1,6 +1,7 @@
 let news;
 $('#news').hide();
-$.getJSON("../data/mail.json", function (data) {
+console.log("hellothere")
+$.getJSON("../data/news.json", function (data) {
     news = data;
     data.forEach(email => {
         let emailElement = `
@@ -9,8 +10,8 @@ $.getJSON("../data/mail.json", function (data) {
                
                 <div>
                     <div>${email.heading}</div>
+                    <div class="date">${email.timeToRead}</div>
                     <div class="date">${email.date}</div>
-                    <div class="name">${email.from}</div>
                   </div>
             </li>
         </div>
@@ -36,15 +37,9 @@ function openMail(id) {
             <div>
             <strong>Heading:</storng>
             <div class="name">${singleNews.heading}</div>
-            <strong>Date:</storng>
-            <div class="date">${singleNews.date}</div> 
-            <strong>From:</storng>
-            <div class="name">${singleNews.fromMail}</div>
-            <strong>To:</storng>
-            <div class="name">${singleNews.toMail}</div>
+            <img src="${singleNews.image}" class="news-img" width="500" height="800"> 
             </div>
-            <strong>Message:</storng>
-            <li class="message email-messssage">
+            <li class="message news-messssage">
                 ${singleNews.message}
             </li>
         </div>
