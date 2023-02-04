@@ -16,17 +16,15 @@
 }
 
 .box__prompt {
-    position: 'absolute';
-    background: lightgrey;
     position: absolute;
     width: 100px;
-    box-shadow: 2px 2px;
-    margin-bottom: 2rem;
-    padding: 1rem;
-    border-radius: 3px;
-    background: #fff;
-    line-height: 1.5rem;
-    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+}
+
+.prompt {
+    margin-bottom: 20px;
+    position: relative;
+    display: block;
+    width: 200px;
 }
 
 .box__heading {

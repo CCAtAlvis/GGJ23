@@ -28,8 +28,8 @@ var term = terminalWindow.terminal(function(command, term) {
     // detect iframe codepen preview
     enabled: $('body').attr('onload') === undefined,
     onInit: function() {
-        this.echo('[[i;#fff;]the next gen synth os]');
-        this.echo('Type [[b;#fff;]exit] to see turn off animation.');
+        this.echo('[[i;#fff;]the next gen synth terminal]');
+        // this.echo('Type [[b;#fff;]exit] to see turn off animation.');
 
         scanlines[0].style.setProperty("height", terminalWindow.height());
         scanlines[0].style.setProperty("width", terminalWindow.width());
