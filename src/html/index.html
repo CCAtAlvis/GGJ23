@@ -9,7 +9,9 @@
 
     <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="../css/wallpaper.css" />
-    <link rel="stylesheet" href="../css/terminal.css">
+    <link rel="stylesheet" href="../css/desktop.css" />
+    <link rel="stylesheet" href="../css/window.css" />
+    <link rel="stylesheet" href="../css/terminal.css" />
 
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/jquery.terminal@2.x.x/js/jquery.terminal.min.js"></script>
@@ -18,15 +20,15 @@
 
 <body>
     <template id="terminal-greetings">
-        _______ _ _________ _________ _______ _______ _______
-        ( ____ \|\ /|( ( /|\__ __/|\ /|\__ __/( ____ \( ____ )( )
-        | ( \/( \ / )| \ ( | ) ( | ) ( | ) ( | ( \/| ( )|| () () |
-        | (_____ \ (_) / | \ | | | | | (___) | | | | (__ | (____)|| || || |
-        (_____ ) \ / | (\ \) | | | | ___ | | | | __) | __)| |(_)| |
-        ) | ) ( | | \ | | | | ( ) | | | | ( | (\ ( | | | |
-        /\____) | | | | ) \ | | | | ) ( | | | | (____/\| ) \ \__| ) ( |
-        \_______) \_/ |/ )_) )_( |/ \| )_( (_______/|/ \__/|/ \|
-    </template>
+_______           _       _________         _________ _______  _______  _______ 
+(  ____ \|\     /|( (    /|\__   __/|\     /|\__   __/(  ____ \(  ____ )(       )
+| (    \/( \   / )|  \  ( |   ) (   | )   ( |   ) (   | (    \/| (    )|| () () |
+| (_____  \ (_) / |   \ | |   | |   | (___) |   | |   | (__    | (____)|| || || |
+(_____  )  \   /  | (\ \) |   | |   |  ___  |   | |   |  __)   |     __)| |(_)| |
+      ) |   ) (   | | \   |   | |   | (   ) |   | |   | (      | (\ (   | |   | |
+/\____) |   | |   | )  \  |   | |   | )   ( |   | |   | (____/\| ) \ \__| )   ( |
+\_______)   \_/   |/    )_)   )_(   |/     \|   )_(   (_______/|/   \__/|/     \|
+</template>
 
     <div id="gamescreen">
         <div id="wallpaper">
@@ -148,38 +150,9 @@
                 </div>
             </div>
 
-            <div class="box__prompt" id="window-prompt">
-                <div class="prompt">
-                    <heading class="box__heading">
-                        <div class="box__close"> X </div>
-                        <span>Alert</span>
-                    </heading>
-                    <div>
-                        You might just have had an email sir
-                    </div>
-                </div>
-
-                <div class="prompt">
-                    <heading class="box__heading">
-                        <div class="box__close"> X </div>
-                        <span>Alert</span>
-                    </heading>
-                    <div>
-                        You might just have had an email sir
-                    </div>
-                </div>
-
-                <div class="prompt">
-                    <heading class="box__heading">
-                        <div class="box__close"> X </div>
-                        <span>Alert</span>
-                    </heading>
-                    <div>
-                        You might just have had an email sir
-                    </div>
-                </div>
-            </div>
+            <div class="box__prompt" id="window-prompt"></div>
         </div>
+
         <script src="../js/mail.js"></script>
         <script src="../js/commandsProccessor.js"></script>
         <script src="../js/window.js"></script>

@@ -1,4 +1,4 @@
-windowsList = ["window-mail", "window-help", "window-profile" , "window-news", "window-terminal"]
+const windowsList = ["window-mail", "window-help", "window-profile" , "window-news", "window-terminal"];
 
 // Function to toggle window based on dev id
 function showWindow(windowId) {
@@ -8,7 +8,7 @@ function showWindow(windowId) {
     $("#" + windowId).css({ top: ht, left: w, position: 'absolute' });
 };
 
-$("#window-prompt").css({top: 50, left: (screen.width - 180)});
+$("#window-prompt").css({top: 30, left: (screen.width - 200 -30 -30)});
 
 for (i = 0; i < windowsList.length; i++) {
     currWindow = windowsList[i];

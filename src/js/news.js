@@ -8,12 +8,30 @@ let news = [
         "image" : "../images/money.jpg",
         "visible" : false
     }
-]
-;
+];
+
 $('#news').hide();
 
-
-
+$.getJSON("../data/news.json", function (data) {
+    news = data;
+    data.forEach(email => {
+        let emailElement = `
+        <div class="pointer">
+            <li class="message inherit-pointer" id="${email.uid}" onclick=openNews(this.id)>
+               
+                <div>
+                    <div>${email.heading}</div>
+                    <div class="date">${email.timeToRead}</div>
+                    <div class="date">${email.date}</div>
+                  </div>
+            </li>
+        </div>
+    `
+        if (email.visible) {
+            $("#news-listing").append(emailElement);
+        }
+    })
+});
 
 function openNews(id) {
     let singleNews = news.find(el => el.uid === id);

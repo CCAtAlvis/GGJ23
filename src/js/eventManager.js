@@ -39,6 +39,7 @@ let events = {
     ]
 
 }
+
 function startEvent(id) {
     let eventToBeTriggered = events[id];
     
