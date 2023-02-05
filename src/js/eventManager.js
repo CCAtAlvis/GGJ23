@@ -152,7 +152,39 @@ let events = {
                 id:12
             }
         },
-    ]
+    ],
+    16 : [
+        {
+            action: tirggerAiBot,
+            data: {
+                id:13
+            }
+        },
+    ],
+    17 : [
+        {
+            action: tirggerAiBot,
+            data: {
+                id:14
+            }
+        },
+    ],
+    18 : [
+        {
+            action: tirggerAiBot,
+            data: {
+                id:15
+            }
+        },
+    ],
+    19 : [
+        {
+            action: tirggerAiBot,
+            data: {
+                id:16
+            }
+        },
+    ],
 
 }
 

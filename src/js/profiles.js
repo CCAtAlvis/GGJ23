@@ -37,6 +37,9 @@ function displayProfile(profileID) {
         if(profile.id == 27){
             startEvent(12);
         }
+        if(profile.id == 44){
+            startEvent(16);
+        }
         if (profile.id == profileID) {
             let profileHTML = `
             <img class="profile-img center" src=${profile.picture.thumbnail} alt="Avatar">

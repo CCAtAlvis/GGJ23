@@ -15,7 +15,7 @@ let emails = [
         "from" : "Arthur",
         "fromMail" : "arthur@gmail.com",
         "toMail" : "luffy@gmail.com",
-        "heading" : "",
+        "heading" : "AI updated",
         "message" : `I have loaded information in your synth bot, it will help you understand the further steps. I’ll try to find some more evidence in this matter.`,
         "date" : "April 09, 3403",
         "image" : "../images/img_avatar.png",
