@@ -21,6 +21,9 @@ const aiBotTexts = {
     20: 'Always be on outlook for notes!',
     21: 'NETINFO',
     22: 'Do you really think wputting this can really bring down Harbinger System?!!',
+    23: 'See I told you it wont be able to! Ohhh... It seems like we did really crack most of the passwords. Lets try accessing aayushi.ramesh@example.com',
+    24: 'I sense something deep in the bin, you know the drill if you found something, i am going on a break till then',
+    25: 'These weren\'t as good upgrades as I was expected them to be. Can you do any better?!'
 
     // 18: 'These users might have never reset the passwords.'
 };

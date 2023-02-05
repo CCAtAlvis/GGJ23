@@ -55,7 +55,10 @@ let lsCommands = {
             "users": {
                 "synth": {
                     "downloads" : {
-                        "module1.ai" : {isFile : true , text : "dan svfiUSBIc uovyiqbuvyfewrvjdbcslhkc avuli wvduyefciul" , "isHidden" : true}
+                        "module1.ai" : {isFile : true , text : "Never gonna give you up, Never gonna let you down" , "isHidden" : true},
+                        "module2.ai" : {isFile : true , text : "Never gonna give you up, Never gonna let you down" , "isHidden" : true},
+                        "module3.ai" : {isFile : true , text : "Never gonna give you up, Never gonna let you down" , "isHidden" : true},
+                        "module4.ai" : {isFile : true , text : "Never gonna give you up, Never gonna let you down" , "isHidden" : true}
                     },
                     "documents": {
                         "1.txt": {
@@ -247,7 +250,7 @@ let lsCommands = {
             "bin": {
                 "c++": { isFile: true, text: "asxdvfdnjcBUCSBVKCvaUCviyvcyv" },
                 "node": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
-                "module1.ai" : {isFile : true , text : "dan svfiUSBIc uovyiqbuvyfewrvjdbcslhkc avuli wvduyefciul"}
+                "module1.ai" : {isFile : true , text : "Never gonna give you up, Never gonna let you down"}
             },
             "var": {
                 "file1": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
@@ -332,7 +335,8 @@ let lsCommands = {
             "bin": {
                 "c++": { isFile: true, text: "asxdvfdnjcBUCSBVKCvaUCviyvcyv" },
                 "node": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
-                "module1.ai" : {isFile : true , text : "dan svfiUSBIc uovyiqbuvyfewrvjdbcslhkc avuli wvduyefciul"}
+                "module2.ai" : {isFile : true , text : "Never gonna give you up, Never gonna let you down"},
+                "module3.ai.test" : {isFile : true , text : "Never gonna give you up, Never gonna let you down", author: "Reginald Wagner"},
             },
             "var": {
                 "file1": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
@@ -342,7 +346,7 @@ let lsCommands = {
 
         }
     },
-    "root@74.125.226.01" :{}
+    "root@74.125.226.01": {}
 }
 function processCommands(command) {
     var result = "command not found";
@@ -367,9 +371,12 @@ function processCommands(command) {
                 startEvent(14);
             } else if (command.args[0] == "krishna.namnaik@example.com") {
                 startEvent(18);
-            } else if (command.args[0] == "krishna.namnaik@example.com") {
+            } else if (command.args[0] == "philip.hopkins@example.com") {
                 startEvent(23);
+            } else if (command.args[0] == "aayushi.ramesh@example.com") {
+                startEvent(30);
             }
+
             loggedIP = command.args[0];
             currentPath = sshCommands[command.args[0]].path;
             term.set_prompt(sshCommands[command.args[0]].prompt);
@@ -538,14 +545,34 @@ function processCommands(command) {
         }
     }
     else if (command.name == "wput") {
-        if(command.args[0] == "https://tinyurl.com/reset-passwd" && command.args[1]=="prisha.vernekar@example.com"){
+        if(command.args[0] === "https://tinyurl.com/reset-passwd" && command.args[1]==="prisha.vernekar@example.com") {
             for(let pods in sshCommands){
                 if(!adminPods.includes(pods)){
                     delete sshCommands[pods].password;
                 }
             }
-        }
-        else{
+
+            term.echo('[RESET-PASSWD] Gaining Access.');
+            term.echo('[RESET-PASSWD] Gaining Access..');
+            term.echo('[RESET-PASSWD] Gaining Access...');
+            term.echo('[RESET-PASSWD] Gained Access!');
+            term.echo('[RESET-PASSWD] Reseting User Passwords (1/10)');
+            term.echo('[RESET-PASSWD] Reseting User Passwords (2/10)');
+            term.echo('[RESET-PASSWD] Reseting User Passwords (3/10)');
+            term.echo('[RESET-PASSWD] Reseting User Passwords (5/10)');
+            term.echo('[RESET-PASSWD] Reseting User Passwords (6/10)');
+            term.echo('[RESET-PASSWD] Reseting User Passwords (6/10)');
+            term.echo('[RESET-PASSWD] Reseting User Passwords (8/10)');
+            term.echo('[RESET-PASSWD] Reseting User Passwords (9/10)');
+            term.echo('[RESET-PASSWD] Reseting User Passwords (9/10)');
+            term.echo('[RESET-PASSWD] Reseting User Passwords (9/10)');
+            term.echo('[RESET-PASSWD] Reseting User Passwords (9/10)');
+            term.echo('[RESET-PASSWD] Reseting User Passwords (9/10)');
+            term.echo('[RESET-PASSWD] Reseting User Passwords: Failed, couldn\'t gain access to Harbinger System root');
+            term.echo('[RESET-PASSWD] All other passwords have been reset except for root system');
+
+            startEvent(29);
+        } else {
             throw Error("Unable to upload the file to given location");
         }
         // wput file to url
@@ -580,6 +607,8 @@ function processCommands(command) {
 
                 if (filename === "module1.ai") {
                     startEvent(20);
+                } else if (filename === "module2.ai") {
+                    startEvent(31);
                 }
 
                 term.echo("Download Completed");

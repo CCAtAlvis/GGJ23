@@ -245,6 +245,24 @@ let events = {
             id: 22,
             delay: 3000
         }
+    }],
+    29: [{
+        action: tirggerAiBot,
+        data: {
+            id: 23
+        }
+    }],
+    30: [{
+        action: tirggerAiBot,
+        data: {
+            id: 24
+        }
+    }],
+    31: [{
+        action: tirggerAiBot,
+        data: {
+            id: 25
+        }
     }]
 }
 
