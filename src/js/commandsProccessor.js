@@ -48,8 +48,8 @@ let lsCommands = {
                 }
             },
             "bin": {
-                "c++": { isFile: true, text: "asxdvfdnjcBUCSBVKCvaUCviyvcyv" },
-                "node": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" }
+                "c++": { isFile: true, text: "asxdvfdnjcBUCSBVKCvaUCviyvcyv", author: "Frank" },
+                "node": { isFile: false, text: "dan svfiUSBIc uovyiqbuvy" }
             },
             "~": {
                 "file1": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
@@ -285,6 +285,7 @@ function processCommands(command) {
         }
     }
     else if (command.name === "ls") {
+        showAuthors = command.args[0] === "--author";
         let path = currentPath.split(".");
         let files = lsCommands[loggedIP];
         path.forEach(folder => {
@@ -297,9 +298,22 @@ function processCommands(command) {
             }
         })
         let targetFiles = "";
-        Object.keys(files).forEach(file => {
-            targetFiles = targetFiles + " " + file;
+        Object.keys(files).forEach(fileName => {
+            console.log(fileName);
+            file = files[fileName];
+            if (file.isFile) {
+                targetFiles = targetFiles + "file\t"  + fileName;
+            }
+            else {
+                targetFiles = targetFiles + "dir\t"  + fileName;
+            }
+            
+            if (showAuthors) {
+                targetFiles = targetFiles + "\tAuthor: " + (file.author!=undefined?file.author||"Unknown":"Unknown");
+            }
+            targetFiles += "\n";
         })
+        
         startEvent(6);
         if (loggedIP == "root@186.255.190.185") {
             startEvent(9);
@@ -379,6 +393,26 @@ function processCommands(command) {
             }
 
         }
+    }
+    else if (command.name == "netstat") {
+        term.echo("netstat");
+        // current ip, subnet ips
+    }
+    else if (command.name == "rm") {
+        term.echo("rm");
+        // Shut down website
+    }
+    else if (command.name == "sendmail") {
+        term.echo("sendmail");
+        // Send email from, to, text
+    }
+    else if (command.name == "wput") {
+        term.echo("wput");
+        // wput file to url
+    }
+    else if (command.name == "wget") {
+        term.echo("wget");
+        // wget file to our folder
     }
     else if (result && result instanceof $.fn.init) {
         term.echo('<#jQuery>');
