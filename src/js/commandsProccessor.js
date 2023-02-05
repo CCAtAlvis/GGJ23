@@ -269,7 +269,7 @@ let lsCommands = {
                         "netinfo": {
                             "help": {
                                 isFile: true,
-                                text: 'netinfo: netinfo is used get network info of a machine'    
+                                text: 'netinfo: netinfo is used get network info of a machine\nUsage: netinfo'    
                             }
                         }
                     },
@@ -409,10 +409,10 @@ function processCommands(command) {
         if (loggedIP == "root@186.255.190.185") {
             startEvent(9);
             startEvent(10);
-        }
-
-        if (path.includes("bin") && loggedIP == "krishna.namnaik@example.com") {
+        } else if (path.includes("bin") && loggedIP == "krishna.namnaik@example.com") {
             startEvent(19);
+        } else if (path.includes("netinfo") && loggedIP == "philip.hopkins@example.com") {
+            startEvent(24);
         }
         term.echo(targetFiles);
     }
@@ -498,6 +498,10 @@ function processCommands(command) {
         term.echo("Current IP : " + loggedIP);
         if(sshCommands[loggedIP]?.parentIp){
              term.echo("Parent IP : "+ sshCommands[loggedIP].parentIp );
+        }
+
+        if (loggedIP === "philip.hopkins@example.com") {
+            startEvent(25);
         }
         // current ip, subnet ips
     }

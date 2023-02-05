@@ -14,7 +14,7 @@ let sendNews = (data) => {
     foundNews.visible = true;
     console.log(foundNews)
 }
-let currentState = 18;
+let currentState = 24;
 let events = {
     1: [
         {
@@ -194,7 +194,25 @@ let events = {
             delay: 1000
         }
     }],
-    
+    23: [{
+        action: tirggerAiBot,
+        data: {
+            id: 20
+        }
+    }],
+    24: [{
+        action: tirggerAiBot,
+        data: {
+            id: 21
+        }
+    }],
+    25: [{
+        action: sendMail,
+        data: {
+            mailId: 4,
+            delay: 3000
+        }
+    }]
 
 }
 

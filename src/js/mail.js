@@ -1,11 +1,22 @@
 let emails = [
     {
-        "uid" : "4",
+        "uid" : "1w123123",
         "from" : "Abhijith",
         "fromMail" : "abhijith.bhat@example.com",
         "toMail" : "prisha.vernekar@example.com",
         "heading" : "Password has been reset    ",
         "message" : `Your new password is password@123`,
+        "date" : "April 10, 3403",
+        "image" : "../images/img_avatar.png",
+        "visible" : false
+    },
+    {
+        "uid" : "4",
+        "from" : "Arthur",
+        "fromMail" : "arthur@gmail.com",
+        "toMail" : "luffy@gmail.com",
+        "heading" : "Re: IP Analysis | Centeral Command Found",
+        "message" : `Found one of the central servers of Harbinger System network. This ip, 74.125.226.01, that you sent for analysis is one of the central servers of Harbinger System, if somehow we can find users on this server and exploit them, we can get upper hand here!`,
         "date" : "April 10, 3403",
         "image" : "../images/img_avatar.png",
         "visible" : false

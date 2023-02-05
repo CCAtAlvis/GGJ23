@@ -17,8 +17,10 @@ const aiBotTexts = {
     16: 'It looks like module1.ai will complement me, can you please wget it?',
     17: 'I feel upgraded! We can still explore more, how about checking their sent mails',
     18: '"concerning" it doesnt sound too good, lets explore more!',
-    19: 'Lets explore the insecured accounts and see if we can get some info'
-
+    19: 'Lets explore the insecured accounts and see if we can get some info',
+    20: 'Always be on outlook for notes!',
+    21: 'NETINFO',
+    22: 'This looks like central server ip',
 
     // 18: 'These users might have never reset the passwords.'
 };
