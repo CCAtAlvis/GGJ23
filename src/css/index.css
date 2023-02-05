@@ -84,3 +84,9 @@ body {
 .name {
   color: #999;
 }
+
+img {
+  padding: 2px;
+  border-radius: 50%;
+  height: 80px;
+}
