@@ -13,8 +13,4 @@ const aiBottextContainer = document.querySelector("#ai-container .box__content")
 function tirggerAiBot(data) {
     aiBotBox.style.display = 'block';
     aiBottextContainer.textContent = aiBotTexts[data.id];
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 51b912a45551f2785f18a126a0b9e6f096feb830
