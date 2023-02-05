@@ -1,9 +1,20 @@
 let emails = [
     {
+        "uid" : "3",
+        "from" : "Arthur",
+        "fromMail" : "arthur@gmail.com",
+        "toMail" : "luffy@gmail.com",
+        "heading" : "Lets get started",
+        "message" : `I've found a way into the Harbinger System network. Our system detected that this user Gautam Uchil is vulnerable to a potential SSH (Secure Shell) attack. We can try to exploit this weak link. Time is running out.`,
+        "date" : "April 10, 3403",
+        "image" : "../images/img_avatar.png",
+        "visible" : false
+    },
+    {
         "uid" : "2",
         "from" : "Arthur",
         "fromMail" : "arthur@gmail.com",
-        "toMail" : "lufi@gmail.com",
+        "toMail" : "luffy@gmail.com",
         "heading" : "",
         "message" : `I have loaded information in your synth bot, it will help you understand the further steps. I’ll try to find some more evidence in this matter.`,
         "date" : "April 09, 3403",
@@ -14,7 +25,7 @@ let emails = [
         "uid" : "1",
         "from" : "Arthur",
         "fromMail" : "arthur@gmail.com",
-        "toMail" : "lufi@gmail.com",
+        "toMail" : "luffy@gmail.com",
         "heading" : "Critical Mission",
         "message" : `As you are aware, the Omega System has become a strict and oppressive ruler over the remaining population of Earth. It has been nearly impossible to penetrate its seemingly impenetrable defenses, until now.
         One of the lower-level developers holds the key to accessing the network. We need to infiltrate by hacking into their systems and work our way up the positions. Our goal is to get root access to the Omega System and bring down the tyrannical regime.
@@ -42,6 +53,9 @@ function openMail(id) {
     }
     if(id==2){
         startEvent(3);
+    }
+    if(id==3){
+        startEvent(11);
     }
     $('#inbox').hide();
     $('#mail').show();

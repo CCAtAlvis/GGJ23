@@ -7,7 +7,12 @@ let sshCommands = {
         prompt: "root@74.125.226.45> ",
         path: "/",
         password : "admin"
-    }
+    },
+    "gautam.uchil@example.com": {
+        prompt: "root@74.125.226.38> ",
+        path: "/",
+        password : "password"
+    },
 }
 let loggedIP = "SynthOS";
 let currentPath = "/.bin";
@@ -134,6 +139,38 @@ let lsCommands = {
             ".history" :{isFile : true , text : "cd ..\nmongo\nnode index.js\nclear\nclear\ngit reset --hard\nset password helloworld" }
 
         }
+    },
+    "gautam.uchil@example.com": {
+        "/": {
+            "gautamuchil": {
+                "name": {
+                    "documents": {
+                        "release_notes.txt": {
+                            isFile: true,
+                            "text": "The release of Version 0.1 in May, 1969 marks a significant milestone in AI development. As per the initial reports, the AI is functioning effectively and demonstrating the ability to identify criminal intentions through analyzing public sentiment. This breakthrough is a testament to the dedicated efforts of Dr. Krishna Kouser, who led the research team. This achievement holds immense potential to positively impact humanity. Congratulations to the entire team!"
+                        }
+                    },
+                    "office": {
+                        "final.pptx": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
+                        "id.png": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
+                        "ssh.pem": {
+                            isFile: true,
+                            "text": "SSH-12345kdsonsdpodonJOSDHohDSnoD"
+                        }
+                    }
+                }
+            },
+            "bin": {
+                "c++": { isFile: true, text: "asxdvfdnjcBUCSBVKCvaUCviyvcyv" },
+                "node": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" }
+            },
+            "var": {
+                "file1": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
+                "file2": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" }
+            },
+            ".history" :{isFile : true , text : "cd ..\nmongo\nnode index.js\nclear\nclear\ngit reset --hard\nset password helloworld" }
+
+        }
     }
 }
 function processCommands(command) {
@@ -145,6 +182,7 @@ function processCommands(command) {
         else if (sshCommands[command.args[0]].prompt) {
             if(sshCommands[command.args[0]].password){
                 if(command.args[1]!="-p"){
+                    startEvent(13);
                     throw Error("Password is required");
                 }
                 if(command.args[2]!=sshCommands[command.args[0]].password){
@@ -153,6 +191,9 @@ function processCommands(command) {
             }
             if(command.args[0] == "root@186.255.190.185"){
                 startEvent(8);
+            }
+            if(command.args[0] == "gautam.uchil@example.com"){
+                startEvent(14);
             }
             loggedIP = command.args[0];
             currentPath = sshCommands[command.args[0]].path;
@@ -178,6 +219,7 @@ function processCommands(command) {
         startEvent(6);
         if(loggedIP == "root@186.255.190.185"){
             startEvent(9);
+            startEvent(10);
         }
         term.echo(targetFiles);
     }
@@ -240,6 +282,9 @@ function processCommands(command) {
                 }
             })
             if(files[command.args[0]].isFile){
+                if(command.args[0]== "release_notes.txt"){
+                    startEvent(15)
+                }
                 term.echo(files[command.args[0]].text);
             }    
             else{
