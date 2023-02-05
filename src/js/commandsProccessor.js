@@ -1,3 +1,5 @@
+const aiModules = ['module1.ai','module2.ai','module3.ai','module4.ai'];
+
 let sshCommands = {
     "root@186.255.190.185": {
         prompt: "root@186.255.190.185> ",
@@ -339,6 +341,10 @@ function processCommands(command) {
             startEvent(9);
             startEvent(10);
         }
+
+        if (path.includes("bin") && loggedIP == "krishna.namnaik@example.com") {
+            startEvent(19);
+        }
         term.echo(targetFiles);
     }
     else if (command.name === "pwd") {
@@ -371,6 +377,9 @@ function processCommands(command) {
                     }
                 })
                 if (files[path] && !files[path].isFile) {
+                    if(command.args[0].endsWith("bin") && loggedIP == "krishna.namnaik@example.com"){
+                        // startEvent(19);
+                    }
                     currentPath = currentPath + "." + path;
                 }
                 else {
@@ -479,8 +488,19 @@ function processCommands(command) {
                     throw Error(`cd : ${folder} is not directory`);
                 }
             })
-            if (files[command.args[0]]?.isFile) {
-                lsCommands.SynthOS["/"].users.synth.downloads[command.args[0]].isHidden = false;
+
+            const filename = command.args[0];
+            if (files[filename]?.isFile) {
+                if (!aiModules.includes(filename)) {
+                    throw Error("Network Error: download failed");
+                }
+
+                lsCommands.SynthOS["/"].users.synth.downloads[filename].isHidden = false;
+
+                if (filename === "module1.ai") {
+                    startEvent(20);
+                }
+
                 term.echo("Download Completed");
             }
             else {

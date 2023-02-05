@@ -14,7 +14,9 @@ const aiBotTexts = {
     13 : 'Lets do the same process for him again to connect to SSH',
     14 : 'In the past, adherence to important security protocols was not as stringent as it is now. It would be worthwhile to investigate the user\'s profile for additional information and insights.',
     15 : 'Time to explore',
-    16 : 'These users might have never reset the passwords.'
+    16: 'It looks like module1.ai will complement me, can you please wget it?',
+    17: 'I feel upgraded!',
+    18: 'These users might have never reset the passwords.'
 };
 
 const aiBotBox = document.querySelector("#ai-container .box");
