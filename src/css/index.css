@@ -90,3 +90,26 @@ img {
   border-radius: 50%;
   height: 80px;
 }
+
+#end-screen {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  color: white;
+  background-color: rgb(215, 49, 49);
+  text-align: center;
+  font-family: "VT323", monospace;
+}
+
+#end-screen h1 {
+  font-size: 100px;
+}
+
+#end-screen h3 {
+  font-size: 2em;
+  line-height: 1.5em;
+}
+
+.endlarge {
+  font-size: 2.5em;
+}
