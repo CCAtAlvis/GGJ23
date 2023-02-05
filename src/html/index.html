@@ -113,8 +113,7 @@ _______           _       _________         _________ _______  _______  _______
                 <div class="box__content message-box" id="inbox">
                     <h1 id="mailbox-header">Inbox</h1>
                     <div class="mailbox-list">
-                        <ul class="message-list" id="mails-inbox">
-                        </ul>
+                        <div class="message-list" id="mails-inbox"></div>
                     </div>
                 </div>
             </div>
@@ -143,16 +142,12 @@ _______           _       _________         _________ _______  _______  _______
                 </heading>
 
                 <div class="box__content message-box">
-
-
-                    <input type="search" placeholder="Search.." id="search-field">
+                    <input type="search" placeholder="Search.." onkeyup="search()" id="search-field">
                     <button onclick="search()">Search</button>
 
                     <div class="mailbox-list">
-                        <div class="message" id="profile-data">
-                            <ul class="message-list" id="profile-list">
-
-                            </ul>
+                        <div class="mailbox-list" id="profile-data">
+                            <div class="message-list" id="profile-list"></div>
                         </div>
                     </div>
                 </div>

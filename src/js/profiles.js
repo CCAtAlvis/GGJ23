@@ -1,29 +1,34 @@
+let profiles = [];
+
+$.getJSON("../data/profiles.json", function (data) {
+    profiles = data;
+    search();
+});
+
 function search() {
     text = $("#search-field").val();
-    $("#profile-data").html(`<ul class="message-list" id="profile-list"></ul>`);
+    $("#profile-data").html(`<div class="message-list" id="profile-list"></div>`);
 
-    // Find the profile in json
-    $.getJSON("../data/profiles.json", function (data) {
-        profiles = data;
-        
-        matchedProfiles = data.filter(profile => {
-            let name = profile.name.first.toLowerCase() + profile.name.last.toLowerCase();
-            if (name.startsWith(text.toLowerCase()))
-                return profile;
-        });
+    matchedProfiles = profiles.filter(profile => {
+        let name = profile.name.first.toLowerCase() + profile.name.last.toLowerCase();
+        if (name.startsWith(text.toLowerCase()))
+            return profile;
+    });
 
-        if (matchedProfiles.length == 0) {
-            $("#profile-data").html(`<b>No results found</b>`);
-        }
+    if (matchedProfiles.length == 0) {
+        $("#profile-data").html(`<b>No results found</b>`);
+    }
 
-        matchedProfiles.forEach(profile => {
-            profilesListHTML = `
-            <div>
-            <button onclick="displayProfile(${profile.id})"><b>${profile.name.title} ${profile.name.first} ${profile.name.last}</b></button>
+    matchedProfiles.forEach(profile => {
+        const profilesListHTML = `
+        <div class="message pointer" onclick="displayProfile(${profile.id})">
+            <div class="mail-grid">
+                <img src=${profile.picture.thumbnail} alt="Avatar" class="center">
+                <div><b>${profile.name.first} ${profile.name.last}</b></div>
             </div>
-            `;
-            $("#profile-list").append(profilesListHTML);
-        });
+        </div>`;
+
+        $("#profile-list").append(profilesListHTML);
     });
 }
 
