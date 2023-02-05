@@ -35,3 +35,16 @@ function tirggerAiBot(data) {
     aiBotBox.style.display = 'block';
     aiBottextContainer.textContent = aiBotTexts[data.id];
 }
+
+function spamAiAlerts(data){
+    aiBotBox.style.display = 'block';
+    aiBottextContainer.textContent = (Math.random() + 1).toString(36).substring(7);
+}
+
+function spamAiAlerts() {
+    setInterval(function () {
+        aiBotBox.style.display = 'block';
+        aiBottextContainer.textContent = (Math.random() + 1).toString(36).substring(7);
+    }, 50);
+  
+}

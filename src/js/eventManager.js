@@ -14,7 +14,7 @@ let sendNews = (data) => {
     foundNews.visible = true;
     console.log(foundNews)
 }
-let currentState = 26;
+let currentState = 34;
 let events = {
     1: [
         {
@@ -263,7 +263,21 @@ let events = {
         data: {
             id: 25
         }
-    }]
+    }],
+    35:[
+        {
+            action: spamAiAlerts,
+        },
+        {
+            action: spamAlerts,
+        },
+        {
+            action : blackScreen,
+            data : {
+                delay : 4000
+            }
+        }
+    ]
 }
 
 function startEvent(id) {
@@ -282,4 +296,4 @@ eventToBeTriggered.forEach(event => {
     })
 
 }
-startEvent(27);
+startEvent(35);
