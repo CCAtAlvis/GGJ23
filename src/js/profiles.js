@@ -33,35 +33,19 @@ function search() {
 }
 
 function displayProfile(profileID) {
-    $.getJSON("../data/profiles.json", function (data) {
-        profiles = data;
+    profiles.forEach(profile => {
+        if (profile.id == profileID) {
+            let profileHTML = `
+            <img class="profile-img center" src=${profile.picture.thumbnail} alt="Avatar">
+            <div>
+                <b>Name:</b> <span class="name">${profile.name.first} ${profile.name.last}</span><br>
+                <b>DOB:</b> <span class="date">${profile.dob.date}</span><br>
+                <b>Bio:</b> <span class="name">${profile.bio}</span><br>
+                <b>Email:</b> <span class="name">${profile.email}</span><br>
+                <b>Phone:</b> <span class="name">${profile.phone}</div><br>
+            </div>`;
 
-        matchedProfile = data.forEach(profile => {
-            if (profile.id == profileID) {
-                let profileHTML = `
-                <img src=${profile.picture.thumbnail} alt="Avatar" class="center">
-                <div>
-                    <b>Name:</b>
-                    <div class="name">${profile.name.title} ${profile.name.first} ${profile.name.last}</div>
-                    <b>DOB: </b>
-                    <div class="date">${profile.dob.date}</div>
-                    <b>Bio:</b>
-                    <div class="name">
-                    ${profile.bio}
-                    </div>
-                    <b>Email:</b>
-                    <div class="name">
-                        ${profile.email}
-                    </div>
-                    <b>Phone:</b>
-                    <div class="name">
-                        ${profile.phone}
-                    </div>
-                </div>
-                `;
-
-                $("#profile-data").html(profileHTML);
-            }
-        });
+            $("#profile-data").html(profileHTML);
+        }
     });
 }

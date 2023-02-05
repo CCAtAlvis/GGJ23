@@ -88,3 +88,7 @@
 #profile-data .mail-grid {
     gap: 10px;
 }
+
+#profile-data .profile-img {
+    height: 100px;
+}
