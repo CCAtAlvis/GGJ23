@@ -13,10 +13,14 @@ const aiBotTexts = {
     12: 'Looks like we found out next target lets find more info about him',
     13 : 'Lets do the same process for him again to connect to SSH',
     14 : 'In the past, adherence to important security protocols was not as stringent as it is now. It would be worthwhile to investigate the user\'s profile for additional information and insights.',
-    15 : 'Time to explore',
+    15 : 'Time to explore, lets check their bin',
     16: 'It looks like module1.ai will complement me, can you please wget it?',
-    17: 'I feel upgraded!',
-    18: 'These users might have never reset the passwords.'
+    17: 'I feel upgraded! We can still explore more, how about checking their sent mails',
+    18: '"concerning" it doesnt sound too good, lets explore more!',
+    19: 'Lets explore the insecured accounts and see if we can get some info'
+
+
+    // 18: 'These users might have never reset the passwords.'
 };
 
 const aiBotBox = document.querySelector("#ai-container .box");

@@ -14,21 +14,27 @@ let sshCommands = {
         users : ["ananthanand","root"]
     },
     "gautam.uchil@example.com": {
-        prompt: "root@74.125.226.38> ",
-        path: "/",
+        prompt: "gautamuchil@74.125.226.38> ",
+        path: "/.usr.gautamuchil",
         password: "password",
         users : ["gautamuchil","root"]
     },
     "krishna.namnaik@example.com": {
-        prompt: "root@74.125.226.31> ",
-        path: "/",
+        prompt: "krishna.namnaik@74.125.226.31> ",
+        path: "/.usr.krishnanamnaik",
         password: "17081962",
         users : ["krishnanamnaik","root"]
     },
+    "aayushi.ramesh@example.com": {
+        prompt: "aayushiramesh@74.125.226.31> ",
+        path: "/.usr.aayushiramesh",
+        password: "kfhskfsdlfksd",
+        users : ["aayushiramesh","root"]
+    },
     "philip.hopkins@example.com" : {
-        prompt: "root@74.125.226.13> ",
-        path: "/",
-        password: "admin@123",
+        prompt: "philiphopkins@74.125.226.13> ",
+        path: "/.usr.philiphopkins",
+        password: "password",
         parentIp : "74.125.226.01",
         users : ["philip","root"]
     },
@@ -174,8 +180,8 @@ let lsCommands = {
     },
     "gautam.uchil@example.com": {
         "/": {
-            "gautamuchil": {
-                "name": {
+            "usr": {
+                "gautamuchil": {
                     "documents": {
                         "release_notes.txt": {
                             isFile: true,
@@ -206,16 +212,12 @@ let lsCommands = {
     },
     "krishna.namnaik@example.com": {
         "/": {
-            "krishnanamnaik": {
-                "name": {
+            "usr": {
+                "krishnanamnaik": {
                     "documents": {
                         "notes.txt": {
                             isFile: true,
                             text: "This invention is truly unparalleled and has the potential to eradicate issues of hunger, crime, and poverty. I am amazed at the AI's capacity to tackle contemporary problems with such ease and efficiency. It is almost unnerving to see just how intelligent this AI technology has become."
-                        },
-                        "security-breach.txt": {
-                            isFile: true,
-                            text: `I regret to inform you that there has been a security breach in our network by an unknown entity. Although no changes have been detected, it is possible that some of our confidential data may have been compromised. The following users have been identified as potentially vulnerable:\nPeter Payne(peter.payne@example.com)\nPhilip Hopkins(philip.hopkins@example.com)\nPrajna Anand(prajna.anand@example.com)\nPrathiksha Chiplunkar(prathiksha.chiplunkar@example.com)\nAs a precautionary measure, their passwords have been reset to "admin@123." I urge everyone to exercise caution and change your passwords as soon as possible.In case you need assistance, please reach out to me.\nPlease take this matter seriously and act promptly to secure your account.If you notice any suspicious activity, please report it immediately.\nRegards,\nMrs.Prisha Vernekar\nSr.DevOps Engineer`
                         }
                     },
                     "office": {
@@ -225,13 +227,27 @@ let lsCommands = {
                             isFile: true,
                             "text": "SSH-12345kdsonsdpodonJOSDHohDSnoD"
                         }
+                    },
+                    "mails": {
+                        "sent": {
+                            "Subject:Experimentation_With_AI": {
+                                isFile: true,
+                                "text": `To: aayushi.ramesh@example.com\nSubject: Experimentation with AI - Concerns and progress with swayness module\n\nMessage: Do we want to proceed with the experiment? The AI appears to have strongly held convictions and can be difficult to sway in certain circumstances. Although this may be concerning, it is functioning well at present. I am eagerly awaiting the completion of the next module so that I can perform a comprehensive analysis.`
+                            }    
+                        },
+                        "inbox": {
+                            "Subject:Security_Breach": {
+                                isFile: true,
+                                text: `From: Mrs.Prisha Vernekar\nSubject: Security Breach\n\n I regret to inform you that there has been a security breach in our network by an unknown entity. Although no changes have been detected, it is possible that some of our confidential data may have been compromised. The following users have been identified as potentially vulnerable:\nPeter Payne(peter.payne@example.com)\nPhilip Hopkins(philip.hopkins@example.com)\nPrajna Anand(prajna.anand@example.com)\nPrathiksha Chiplunkar(prathiksha.chiplunkar@example.com)\nAs a precautionary measure, their passwords have been reset to default password. I urge everyone to exercise caution and change your passwords as soon as possible.In case you need assistance, please reach out to me.\nPlease take this matter seriously and act promptly to secure your account.If you notice any suspicious activity, please report it immediately.\nRegards,\nMrs.Prisha Vernekar\nSr.DevOps Engineer`
+                            }
+                        }
                     }
                 }
             },
             "bin": {
                 "c++": { isFile: true, text: "asxdvfdnjcBUCSBVKCvaUCviyvcyv" },
                 "node": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
-               "module1.ai" : {isFile : true , text : "dan svfiUSBIc uovyiqbuvyfewrvjdbcslhkc avuli wvduyefciul"}
+                "module1.ai" : {isFile : true , text : "dan svfiUSBIc uovyiqbuvyfewrvjdbcslhkc avuli wvduyefciul"}
             },
             "var": {
                 "file1": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
@@ -243,12 +259,50 @@ let lsCommands = {
     },
     "philip.hopkins@example.com": {
         "/": {
-            "philip": {
-                "name": {
+            "usr": {
+                "philiphopkins": {
                     "documents": {
-                        "email.txt": {
+                        "notes.txt": {
                             isFile: true,
-                            text: `To aayushi.ramesh@example.com:\nSubject:  Experimentation with AI - Concerns and progress with swayness module\nDo we want to proceed with the experiment? The AI appears to have strongly held convictions and can be difficult to sway in certain circumstances. Although this may be concerning, it is functioning well at present. I am eagerly awaiting the completion of the next module so that I can perform a comprehensive analysis.`
+                            text: `To aayushi.ramesh@example.com:\nSubject: Experimentation with AI - Concerns and progress with swayness module\nDo we want to proceed with the experiment? The AI appears to have strongly held convictions and can be difficult to sway in certain circumstances. Although this may be concerning, it is functioning well at present. I am eagerly awaiting the completion of the next module so that I can perform a comprehensive analysis.`
+                        },
+                        "netinfo": {
+                            "help": {
+                                isFile: true,
+                                text: 'netinfo: netinfo is used get network info of a machine'    
+                            }
+                        }
+                    },
+                    "office": {
+                        "final.pptx": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
+                        "id.png": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
+                        "ssh.pem": {
+                            isFile: true,
+                            "text": "SSH-Never gonna give you up, Never gonna let you down"
+                        }
+                    }
+                }
+            },
+            "bin": {
+                "c++": { isFile: true, text: "asxdvfdnjcBUCSBVKCvaUCviyvcyv" },
+                "node": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" }
+            },
+            "var": {
+                "file1": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
+                "file2": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" }
+            },
+            ".history": { isFile: true, text: "cd ..\nmongo\nnode index.js\nclear\nclear\ngit reset --hard\nset password helloworld" }
+
+        }
+    },
+    "aayushi.ramesh@example.com": {
+        "/": {
+            "usr": {
+                "aayushiramesh": {
+                    "documents": {
+                        "notes.txt": {
+                            isFile: true,
+                            text: "This invention is truly unparalleled and has the potential to eradicate issues of hunger, crime, and poverty. I am amazed at the AI's capacity to tackle contemporary problems with such ease and efficiency. It is almost unnerving to see just how intelligent this AI technology has become."
                         }
                     },
                     "office": {
@@ -258,12 +312,27 @@ let lsCommands = {
                             isFile: true,
                             "text": "SSH-12345kdsonsdpodonJOSDHohDSnoD"
                         }
+                    },
+                    "mails": {
+                        "sent": { 
+                        },
+                        "inbox": {
+                            "Subject:Experimentation_With_AI": {
+                                isFile: true,
+                                "text": `From: krishna.namnaik@example.com\nSubject: Experimentation with AI - Concerns and progress with swayness module\n\nMessage: Do we want to proceed with the experiment? The AI appears to have strongly held convictions and can be difficult to sway in certain circumstances. Although this may be concerning, it is functioning well at present. I am eagerly awaiting the completion of the next module so that I can perform a comprehensive analysis.`
+                            },
+                            "Subject:Security_Breach": {
+                                isFile: true,
+                                text: `From: Mrs.Prisha Vernekar\nSubject: Security Breach\n\n I regret to inform you that there has been a security breach in our network by an unknown entity. Although no changes have been detected, it is possible that some of our confidential data may have been compromised. The following users have been identified as potentially vulnerable:\nPeter Payne(peter.payne@example.com)\nPhilip Hopkins(philip.hopkins@example.com)\nPrajna Anand(prajna.anand@example.com)\nPrathiksha Chiplunkar(prathiksha.chiplunkar@example.com)\nAs a precautionary measure, their passwords have been reset to default password. I urge everyone to exercise caution and change your passwords as soon as possible.In case you need assistance, please reach out to me.\nPlease take this matter seriously and act promptly to secure your account.If you notice any suspicious activity, please report it immediately.\nRegards,\nMrs.Prisha Vernekar\nSr.DevOps Engineer`
+                            }
+                        }
                     }
                 }
             },
             "bin": {
                 "c++": { isFile: true, text: "asxdvfdnjcBUCSBVKCvaUCviyvcyv" },
-                "node": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" }
+                "node": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
+                "module1.ai" : {isFile : true , text : "dan svfiUSBIc uovyiqbuvyfewrvjdbcslhkc avuli wvduyefciul"}
             },
             "var": {
                 "file1": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
@@ -294,12 +363,12 @@ function processCommands(command) {
             }
             if (command.args[0] == "root@186.255.190.185") {
                 startEvent(8);
-            }
-            if (command.args[0] == "gautam.uchil@example.com") {
+            } else if (command.args[0] == "gautam.uchil@example.com") {
                 startEvent(14);
-            }
-            if (command.args[0] == "krishna.namnaik@example.com") {
+            } else if (command.args[0] == "krishna.namnaik@example.com") {
                 startEvent(18);
+            } else if (command.args[0] == "krishna.namnaik@example.com") {
+                startEvent(23);
             }
             loggedIP = command.args[0];
             currentPath = sshCommands[command.args[0]].path;
@@ -409,11 +478,12 @@ function processCommands(command) {
                 }
             })
             if (files[command.args[0]]?.isFile) {
-                if (command.args[0] == "release_notes.txt") {
-                    startEvent(15)
-                }
-                if (command.args[0] == "security-breach.txt") {
-                    startEvent(19)
+                if (command.args[0] === "release_notes.txt") {
+                    startEvent(15);
+                } else if (command.args[0] === "Subject:Security_Breach") {
+                    startEvent(22);
+                } else if (command.args[0] === "Subject:Experimentation_With_AI") {
+                    startEvent(21);
                 }
                 term.echo(files[command.args[0]].text);
             }
