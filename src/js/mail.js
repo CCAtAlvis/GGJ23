@@ -1,11 +1,44 @@
 let emails = [
     {
-        "uid" : "1w123123",
+        "uid" : "8",
+        "from" : "Arthur",
+        "fromMail" : "arthur@gmail.com",
+        "toMail" : "luffy@gmail.com",
+        "heading" : "RESET-PASSWD",
+        "message" : `now that you have access to sys admin, use this utility (available here: https://tinyurl.com/reset-passwd) to reset all passwords`,
+        "date" : "April 10, 3403",
+        "image" : "../images/img_avatar.png",
+        "visible" : false
+    },
+    {
+        "uid" : "7",
         "from" : "Abhijith",
         "fromMail" : "abhijith.bhat@example.com",
         "toMail" : "prisha.vernekar@example.com",
-        "heading" : "Password has been reset    ",
+        "heading" : "Password has been reset",
         "message" : `Your new password is password@123`,
+        "date" : "April 10, 3403",
+        "image" : "../images/img_avatar.png",
+        "visible" : false
+    },
+    {
+        "uid" : "6",
+        "from" : "Arthur",
+        "fromMail" : "arthur@gmail.com",
+        "toMail" : "luffy@gmail.com",
+        "heading" : "sendmail tips ;)",
+        "message" : `sendmail can be used to spoof user emails, you can send mail from any email and not just yours\nMeanwhile I am also working on a utility that will help you reset all passwords!`,
+        "date" : "April 10, 3403",
+        "image" : "../images/img_avatar.png",
+        "visible" : false
+    },
+    {
+        "uid" : "5",
+        "from" : "Arthur",
+        "fromMail" : "arthur@gmail.com",
+        "toMail" : "luffy@gmail.com",
+        "heading" : "Re: Centeral Server users",
+        "message" : `prishavernekar, this user seems a little odd. The user is more than 1000 year old! use sendmail to mail current sys admin requesting password reset`,
         "date" : "April 10, 3403",
         "image" : "../images/img_avatar.png",
         "visible" : false
@@ -72,12 +105,12 @@ function openMail(id) {
     let email = emails.find(el => el.uid === id);
     if(id==1){
         startEvent(2);
-    }
-    if(id==2){
+    } else if(id==2){
         startEvent(3);
-    }
-    if(id==3){
+    } else if(id==3){
         startEvent(11);
+    } else if (id==8) {
+        startEvent(28);
     }
     $('#inbox').hide();
     $('#mail').show();
