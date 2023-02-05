@@ -55,3 +55,8 @@
     background-color: #fff;
     position: relative;
 }
+
+#window-help .box__content {
+    max-height: 500px;
+    overflow: scroll;
+}
