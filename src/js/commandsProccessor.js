@@ -17,6 +17,11 @@ let sshCommands = {
         prompt: "root@74.125.226.31> ",
         path: "/",
         password: "17081962"
+    },
+    "philip.hopkins@example.com" : {
+        prompt: "root@74.125.226.13> ",
+        path: "/",
+        password: "admin@123"
     }
 }
 let loggedIP = "SynthOS";
@@ -190,17 +195,39 @@ let lsCommands = {
                         },
                         "security-breach.txt": {
                             isFile: true,
-                            text: `I regret to inform you that there has been a security breach in our network by an unknown entity. Although no changes have been detected, it is possible that some of our confidential data may have been compromised. The following users have been identified as potentially vulnerable:
-                                    Peter Payne(peter.payne@example.com)
-                                    Philip Hopkins(philip.hopkins@example.com)
-                                    Prajna Anand(prajna.anand@example.com)
-                                    Prathiksha Chiplunkar(prathiksha.chiplunkar@example.com)
-                                    As a precautionary measure, their passwords have been reset to "admin@123." I urge everyone to exercise caution and change your passwords as soon as possible.In case you need assistance, please reach out to me.
-                                    Please take this matter seriously and act promptly to secure your account.If you notice any suspicious activity, please report it immediately.
-                                    Regards,
-                                    Mrs.Prisha Vernekar
-                                    Sr.DevOps Engineer
-                                    `
+                            text: `I regret to inform you that there has been a security breach in our network by an unknown entity. Although no changes have been detected, it is possible that some of our confidential data may have been compromised. The following users have been identified as potentially vulnerable:\nPeter Payne(peter.payne@example.com)\nPhilip Hopkins(philip.hopkins@example.com)\nPrajna Anand(prajna.anand@example.com)\nPrathiksha Chiplunkar(prathiksha.chiplunkar@example.com)\nAs a precautionary measure, their passwords have been reset to "admin@123." I urge everyone to exercise caution and change your passwords as soon as possible.In case you need assistance, please reach out to me.\nPlease take this matter seriously and act promptly to secure your account.If you notice any suspicious activity, please report it immediately.\nRegards,\nMrs.Prisha Vernekar\nSr.DevOps Engineer`
+                        }
+                    },
+                    "office": {
+                        "final.pptx": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
+                        "id.png": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
+                        "ssh.pem": {
+                            isFile: true,
+                            "text": "SSH-12345kdsonsdpodonJOSDHohDSnoD"
+                        }
+                    }
+                }
+            },
+            "bin": {
+                "c++": { isFile: true, text: "asxdvfdnjcBUCSBVKCvaUCviyvcyv" },
+                "node": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" }
+            },
+            "var": {
+                "file1": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
+                "file2": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" }
+            },
+            ".history": { isFile: true, text: "cd ..\nmongo\nnode index.js\nclear\nclear\ngit reset --hard\nset password helloworld" }
+
+        }
+    },
+    "philip.hopkins@example.com": {
+        "/": {
+            "philip": {
+                "name": {
+                    "documents": {
+                        "email.txt": {
+                            isFile: true,
+                            text: `To aayushi.ramesh@example.com:\nSubject:  Experimentation with AI - Concerns and progress with swayness module\nDo we want to proceed with the experiment? The AI appears to have strongly held convictions and can be difficult to sway in certain circumstances. Although this may be concerning, it is functioning well at present. I am eagerly awaiting the completion of the next module so that I can perform a comprehensive analysis.`
                         }
                     },
                     "office": {
