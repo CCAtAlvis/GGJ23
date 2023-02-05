@@ -4,6 +4,7 @@ let sendMail = (data) => {
     //enable mail 1
     let foundMail = emails.find(mail => { return mail.uid == data.mailId })
     foundMail.visible = true;
+    renderMail();
 }
 let sendNews = (data) => {
     //alert
@@ -21,9 +22,6 @@ let events = {
             data: {
                 mailId: 1,
             }
-        },
-        {
-            action: renderMail
         }
     ],
     2: [
@@ -32,12 +30,6 @@ let events = {
             data: {
                 mailId: 2,
                 delay : 3000
-            }
-        },
-        {
-            action: renderMail,
-            data : {
-                delay : 3500
             }
         }
     ],
@@ -104,12 +96,6 @@ let events = {
             data: {
                 mailId: 3,
                 delay : 6000
-            }
-        },
-        {
-            action: renderMail,
-            data : {
-                delay : 6300
             }
         }
     ],
@@ -184,7 +170,7 @@ let events = {
                 id:16
             }
         },
-    ],
+    ]
 
 }
 

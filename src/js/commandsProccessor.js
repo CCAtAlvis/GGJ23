@@ -1,36 +1,54 @@
 let sshCommands = {
     "root@186.255.190.185": {
         prompt: "root@186.255.190.185> ",
-        path: "/"
+        path: "/",
+        parentIp : "74.125.226.01",
+        users : ["ananthanand","root"]
     },
     "root@74.125.226.45": {
         prompt: "root@74.125.226.45> ",
         path: "/",
-        password: "admin"
+        password: "admin",
+        users : ["ananthanand","root"]
     },
     "gautam.uchil@example.com": {
         prompt: "root@74.125.226.38> ",
         path: "/",
-        password: "password"
+        password: "password",
+        users : ["gautamuchil","root"]
     },
     "krishna.namnaik@example.com": {
         prompt: "root@74.125.226.31> ",
         path: "/",
-        password: "17081962"
+        password: "17081962",
+        users : ["krishnanamnaik","root"]
     },
     "philip.hopkins@example.com" : {
         prompt: "root@74.125.226.13> ",
         path: "/",
-        password: "admin@123"
+        password: "admin@123",
+        parentIp : "74.125.226.01",
+        users : ["philip","root"]
+    },
+    "root@74.125.226.01" :{
+        prompt: "root@74.125.226.13> ",
+        path: "/",
+        password: "kcsulhnfuhuiadyq98h",
+        parentIp : "74.125.226.01",
+        users : ["philip","root","prisha","adah","abhijith"]
     }
 }
 let loggedIP = "SynthOS";
 let currentPath = "/.bin";
+
 let lsCommands = {
     "SynthOS": {
         "/": {
             "users": {
-                "name": {
+                "synth": {
+                    "downloads" : {
+                        "module1.ai" : {isFile : true , text : "dan svfiUSBIc uovyiqbuvyfewrvjdbcslhkc avuli wvduyefciul" , "isHidden" : true}
+                    },
                     "documents": {
                         "1.txt": {
                             isFile: true,
@@ -210,7 +228,8 @@ let lsCommands = {
             },
             "bin": {
                 "c++": { isFile: true, text: "asxdvfdnjcBUCSBVKCvaUCviyvcyv" },
-                "node": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" }
+                "node": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
+               "module1.ai" : {isFile : true , text : "dan svfiUSBIc uovyiqbuvyfewrvjdbcslhkc avuli wvduyefciul"}
             },
             "var": {
                 "file1": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
@@ -252,6 +271,7 @@ let lsCommands = {
 
         }
     },
+    "root@74.125.226.01" :{}
 }
 function processCommands(command) {
     var result = "command not found";
@@ -299,8 +319,8 @@ function processCommands(command) {
         })
         let targetFiles = "";
         Object.keys(files).forEach(fileName => {
-            console.log(fileName);
             file = files[fileName];
+            if(file.isHidden)return;
             if (file.isFile) {
                 targetFiles = targetFiles + "file\t"  + fileName;
             }
@@ -397,7 +417,9 @@ function processCommands(command) {
     else if (command.name == "netstat") {
         term.echo("Network Details");
         term.echo("Current IP : " + loggedIP);
-        term.echo("Parent IP : 192.168");
+        if(sshCommands[loggedIP]?.parentIp){
+             term.echo("Parent IP : "+ sshCommands[loggedIP].parentIp );
+        }
         // current ip, subnet ips
     }
     else if (command.name == "rm") {
@@ -418,17 +440,55 @@ function processCommands(command) {
             if(command.args[0] === "prisha.vernekar@example.com" && command.args[1] === "abhijith.bhat@example.com")
             {
                 // Get mail password has been reset to default admin@123. Please reset it asap.
-
+                setTimeout( ()=>{sendMail({mailId : 4})}, 3000); ;
             }
         }
         // Send email from, to, text
+    }
+    else if(command.name == "user"){
+        if(!command.args[0]){
+            throw Error("Please provide Ip address");
+        }
+        let users = sshCommands["root@"+command.args[0]]?.users;
+        if(users){
+            users.forEach(user=>{
+                term.echo(user);
+            })
+        }
     }
     else if (command.name == "wput") {
         term.echo("wput");
         // wput file to url
     }
     else if (command.name == "wget") {
-        term.echo("wget");
+        if (command.args.length > 1) {
+            throw Error('invalid arguments');
+        }
+        else if (!command.args[0]) {
+            throw Error('please provide valid file name');
+        }
+        else {
+            let path = currentPath.split(".");
+            let files = lsCommands[loggedIP];
+            path.forEach(folder => {
+                files = files[folder];
+                if (!files) {
+                    throw Error("Path is wrong");
+                }
+                if (files.isFile == true) {
+                    throw Error(`cd : ${folder} is not directory`);
+                }
+            })
+            if (files[command.args[0]]?.isFile) {
+                lsCommands.SynthOS["/"].users.synth.downloads[command.args[0]].isHidden = false;
+                term.echo("Download Completed");
+            }
+            else {
+                throw Error("Invalid File")
+            }
+
+        }
+        
         // wget file to our folder
     }
     else if (result && result instanceof $.fn.init) {

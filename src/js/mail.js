@@ -1,5 +1,16 @@
 let emails = [
     {
+        "uid" : "4",
+        "from" : "Abhijith",
+        "fromMail" : "abhijith.bhat@example.com",
+        "toMail" : "prisha.vernekar@example.com",
+        "heading" : "Password has been reset    ",
+        "message" : `Your new password is password@123`,
+        "date" : "April 10, 3403",
+        "image" : "../images/img_avatar.png",
+        "visible" : false
+    },
+    {
         "uid" : "3",
         "from" : "Arthur",
         "fromMail" : "arthur@gmail.com",
