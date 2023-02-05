@@ -55,6 +55,7 @@
             "medium": "https://randomuser.me/api/portraits/med/men/87.jpg",
             "thumbnail": "https://randomuser.me/api/portraits/thumb/men/87.jpg"
         },
+        "bio": "DevOps engineer",
         "id": 1
     },
     {
@@ -84,6 +85,7 @@
             "medium": "https://randomuser.me/api/portraits/med/women/48.jpg",
             "thumbnail": "https://randomuser.me/api/portraits/thumb/women/48.jpg"
         },
+        "bio": "DevOps engineer",
         "id": 2
     },
     {
@@ -809,6 +811,7 @@
             "medium": "https://randomuser.me/api/portraits/med/men/13.jpg",
             "thumbnail": "https://randomuser.me/api/portraits/thumb/men/13.jpg"
         },
+        "bio": "",
         "id": 27
     },
     {
@@ -1302,6 +1305,7 @@
             "medium": "https://randomuser.me/api/portraits/med/men/48.jpg",
             "thumbnail": "https://randomuser.me/api/portraits/thumb/men/48.jpg"
         },
+        "bio": "Data Scientist",
         "id": 44
     },
     {
@@ -1331,6 +1335,7 @@
             "medium": "https://randomuser.me/api/portraits/med/men/64.jpg",
             "thumbnail": "https://randomuser.me/api/portraits/thumb/men/64.jpg"
         },
+        "bio": "Data Scientist",
         "id": 45
     },
     {
@@ -2018,7 +2023,7 @@
             "sha256": "cae14b75dab936e1e46977bcedfde36a2b949487c6076898d708b0615da42687"
         },
         "dob": {
-            "date": "03/04/1971",
+            "date": "03/04/3216",
             "age": 51
         },
         "phone": "8916139769",
@@ -2027,6 +2032,7 @@
             "medium": "https://randomuser.me/api/portraits/med/women/71.jpg",
             "thumbnail": "https://randomuser.me/api/portraits/thumb/women/71.jpg"
         },
+        "bio": "DevOps engineer",
         "id": 69
     },
     {

@@ -5,7 +5,7 @@ let emails = [
         "fromMail" : "arthur@gmail.com",
         "toMail" : "luffy@gmail.com",
         "heading" : "RESET-PASSWD",
-        "message" : `now that you have access to sys admin, use this utility (available here: https://tinyurl.com/reset-passwd) to reset all passwords`,
+        "message" : `With access to the system administrator, utilize the available utility (found at https://tinyurl.com/reset-passwd) to reset all passwords.`,
         "date" : "April 10, 3403",
         "image" : "../images/img_avatar.png",
         "visible" : false
@@ -27,7 +27,7 @@ let emails = [
         "fromMail" : "arthur@gmail.com",
         "toMail" : "luffy@gmail.com",
         "heading" : "sendmail tips ;)",
-        "message" : `sendmail can be used to spoof user emails, you can send mail from any email and not just yours\nMeanwhile I am also working on a utility that will help you reset all passwords!`,
+        "message" : `The sendmail tool can be utilized to mimic emails from other users, allowing you to send mail from any email address, not just your own. Additionally, I am in the process of developing a utility to help reset all passwords.`,
         "date" : "April 10, 3403",
         "image" : "../images/img_avatar.png",
         "visible" : false
@@ -37,8 +37,8 @@ let emails = [
         "from" : "Arthur",
         "fromMail" : "arthur@gmail.com",
         "toMail" : "luffy@gmail.com",
-        "heading" : "Re: Centeral Server users",
-        "message" : `prishavernekar, this user seems a little odd. The user is more than 1000 year old! use sendmail to mail current sys admin requesting password reset`,
+        "heading" : "Re: Central Server users",
+        "message" : `The user "prishavernekar" appears to be of interest, as they have a background as a DevOps engineer. We can use the sendmail tool to send a password reset request to the current system administrator. Let's hope that this gets through the cracks.`,
         "date" : "April 10, 3403",
         "image" : "../images/img_avatar.png",
         "visible" : false
@@ -48,8 +48,8 @@ let emails = [
         "from" : "Arthur",
         "fromMail" : "arthur@gmail.com",
         "toMail" : "luffy@gmail.com",
-        "heading" : "Re: IP Analysis | Centeral Command Found",
-        "message" : `Found one of the central servers of Harbinger System network. This ip, 74.125.226.01, that you sent for analysis is one of the central servers of Harbinger System, if somehow we can find users on this server and exploit them, we can get upper hand here!`,
+        "heading" : "Re: IP Analysis | Central Command Found",
+        "message" : `The IP address 74.125.226.01 that was sent for analysis has been identified as one of the central servers of the Harbinger System network. If we can locate users on this server and exploit them, it may give us an advantage.`,
         "date" : "April 10, 3403",
         "image" : "../images/img_avatar.png",
         "visible" : false
@@ -71,7 +71,7 @@ let emails = [
         "fromMail" : "arthur@gmail.com",
         "toMail" : "luffy@gmail.com",
         "heading" : "AI updated",
-        "message" : `I have loaded information in your synth bot, it will help you understand the further steps. I’ll try to find some more evidence in this matter.`,
+        "message" : `I have loaded information in your synth bot, it will help you understand the further steps. I'll try to find some more evidence in this matter.`,
         "date" : "April 09, 3403",
         "image" : "../images/img_avatar.png",
         "visible" : false
