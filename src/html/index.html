@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="../css/desktop.css" />
     <link rel="stylesheet" href="../css/window.css" />
     <link rel="stylesheet" href="../css/terminal.css" />
-    <link rel="stylesheet" href="../css/aiBot.css">
+    <link rel="stylesheet" href="../css/aiBot.css" />
+    <link rel="stylesheet" href="../css/mail.css" />
 
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/jquery.terminal@2.x.x/js/jquery.terminal.min.js"></script>
@@ -44,15 +45,35 @@ _______           _       _________         _________ _______  _______  _______
 
         <div id="desktop">
             <div style="margin-top: 150px; margin-left: 20px">
-                <img src="../images/img_avatar.png" onclick="showWindow('window-profile')">
-                <br>
-                <img src="../images/mail.jpg" onclick="showWindow('window-mail')">
-                <br>
-                <img src="../images/help.jpg" onclick="showWindow('window-help')">
-                <br>
-                <img src="../images/news.jpg" onclick="showWindow('window-news')">
-                <br>
-                <img src="../images/terminal.jpg" onclick="showWindow('window-terminal')">
+                <div class="pointer desktop-icons" onclick="showWindow('window-profile')">
+                    <img src="../images/img_avatar.png">
+                    <br>
+                    Profile
+                </div>
+
+                <div class="pointer desktop-icons" onclick="showWindow('window-mail')">
+                    <img src="../images/mail.jpg">
+                    <br>
+                    Mail
+                </div>
+
+                <div class="pointer desktop-icons" onclick="showWindow('window-help')">
+                    <img src="../images/help.jpg">
+                    <br>
+                    Help
+                </div>
+
+                <div class="pointer desktop-icons" onclick="showWindow('window-news')">
+                    <img src="../images/news.jpg">
+                    <br>
+                    News
+                </div>
+
+                <div class="pointer desktop-icons" onclick="showWindow('window-terminal')">
+                    <img src="../images/terminal.jpg">
+                    <br>
+                    Terminal
+                </div>
             </div>
         </div>
 

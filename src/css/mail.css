@@ -1,0 +1,82 @@
+#mailbox-header {
+    background-color: #f37087;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+    color: #ecf0f1;
+    font-weight: bold;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin: 0;
+}
+
+.message {
+    border: 1px solid #bbb;
+    padding-left: 20px;
+}
+
+.message-content {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 320px;
+}
+
+.message-list {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 400px;
+    width: 100%;
+    padding-bottom: 160px;
+    box-sizing: border-box;
+    list-style: none;
+    padding-left: 0px;
+    margin: 0px;
+}
+
+#mail-body {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.mailbox-list {
+    overflow: hidden;
+    position: relative;
+    padding-top: 10px;
+    max-height: 440px;
+}
+
+.message-box {
+    height: 500px;
+}
+
+.news-img {
+    border-radius: 0%;
+    height: 160px;
+}
+
+.mail-grid {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    gap: 40px;
+}
+
+.back-button {
+    float: left;
+    padding-left: 20px
+}
+
+.email-messssage {
+    overflow-y: scroll;
+    width: 90%;
+    max-height: 310px;
+    margin-bottom: 40px;
+}
+
+.news-messssage {
+    overflow-y: scroll;
+    height: 200px;
+    width: 95%;
+}

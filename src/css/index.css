@@ -20,6 +20,7 @@ body {
   height: 100vh;
   background: #09090e;
   overflow: hidden;
+  font-size: 20px;
 }
 
 #wallpaper {
@@ -47,4 +48,45 @@ body {
   top: 0;
   left: 0;
   position: absolute;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inline {
+  max-width: 250px;
+  padding: 5px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.inherit-pointer {
+  cursor: inherit;
+}
+
+.date {
+  color: #999;
+}
+
+.name {
+  color: #999;
+}
+
+img {
+  padding: 2px;
+  border-radius: 50%;
+  height: 80px;
 }

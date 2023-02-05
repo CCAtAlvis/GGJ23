@@ -1,0 +1,13 @@
+#desktop {
+  font-family: "VT323", monospace;
+}
+
+#desktop img {
+  height: 50px;
+}
+
+.desktop-icons {
+  color: white;
+  margin: 35px 0;
+  text-align: center;
+}
