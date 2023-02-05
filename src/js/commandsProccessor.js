@@ -38,6 +38,13 @@ let sshCommands = {
         parentIp : "74.125.226.01",
         users : ["philip","root"]
     },
+    "reginald.wagner@example.com" : {
+        prompt: "reginaldwagner@74.125.226.13> ",
+        path: "/.usr.reginaldwagner",
+        password: "kfjsfvbscawj",
+        parentIp : "74.125.226.01",
+        users : ["reginaldwagner","root"]
+    },
     "root@74.125.226.01" :{
         prompt: "root@74.125.226.01> ",
         path: "/",
@@ -336,7 +343,54 @@ let lsCommands = {
                 "c++": { isFile: true, text: "asxdvfdnjcBUCSBVKCvaUCviyvcyv" },
                 "node": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
                 "module2.ai" : {isFile : true , text : "Never gonna give you up, Never gonna let you down"},
-                "module3.ai.test" : {isFile : true , text : "Never gonna give you up, Never gonna let you down", author: "Reginald Wagner"},
+                "module3.ai.test" : {isFile : true , text : "Authored by: $@($%@))\nThe File Is Corrupted", author: "Reginald Wagner"},
+            },
+            "var": {
+                "file1": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
+                "file2": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" }
+            },
+            ".history": { isFile: true, text: "cd ..\nmongo\nnode index.js\nclear\nclear\ngit reset --hard\nset password helloworld" }
+
+        }
+    },
+    "reginald.wagner@example.com": {
+        "/": {
+            "usr": {
+                "reginaldwagner": {
+                    "documents": {
+                        "notes.txt": {
+                            isFile: true,
+                            text: "This invention is truly unparalleled and has the potential to eradicate issues of hunger, crime, and poverty. I am amazed at the AI's capacity to tackle contemporary problems with such ease and efficiency. It is almost unnerving to see just how intelligent this AI technology has become."
+                        }
+                    },
+                    "office": {
+                        "final.pptx": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
+                        "id.png": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
+                        "ssh.pem": {
+                            isFile: true,
+                            "text": "SSH-12345kdsonsdpodonJOSDHohDSnoD"
+                        }
+                    },
+                    "mails": {
+                        "sent": { 
+                        },
+                        "inbox": {
+                            "Subject:Experimentation_With_AI": {
+                                isFile: true,
+                                "text": `From: krishna.namnaik@example.com\nSubject: Experimentation with AI - Concerns and progress with swayness module\n\nMessage: Do we want to proceed with the experiment? The AI appears to have strongly held convictions and can be difficult to sway in certain circumstances. Although this may be concerning, it is functioning well at present. I am eagerly awaiting the completion of the next module so that I can perform a comprehensive analysis.`
+                            },
+                            "Subject:Security_Breach": {
+                                isFile: true,
+                                text: `From: Mrs.Prisha Vernekar\nSubject: Security Breach\n\n I regret to inform you that there has been a security breach in our network by an unknown entity. Although no changes have been detected, it is possible that some of our confidential data may have been compromised. The following users have been identified as potentially vulnerable:\nPeter Payne(peter.payne@example.com)\nPhilip Hopkins(philip.hopkins@example.com)\nPrajna Anand(prajna.anand@example.com)\nPrathiksha Chiplunkar(prathiksha.chiplunkar@example.com)\nAs a precautionary measure, their passwords have been reset to default password. I urge everyone to exercise caution and change your passwords as soon as possible.In case you need assistance, please reach out to me.\nPlease take this matter seriously and act promptly to secure your account.If you notice any suspicious activity, please report it immediately.\nRegards,\nMrs.Prisha Vernekar\nSr.DevOps Engineer`
+                            }
+                        }
+                    }
+                }
+            },
+            "bin": {
+                "c++": { isFile: true, text: "asxdvfdnjcBUCSBVKCvaUCviyvcyv" },
+                "node": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
+                "module3.ai" : {isFile : true , text : "Never gonna give you up, Never gonna let you down"},
             },
             "var": {
                 "file1": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
@@ -420,6 +474,8 @@ function processCommands(command) {
             startEvent(19);
         } else if (path.includes("netinfo") && loggedIP == "philip.hopkins@example.com") {
             startEvent(24);
+        } else if (path.includes("bin") && loggedIP == "aayushi.ramesh@example.com") {
+            startEvent(32);
         }
         term.echo(targetFiles);
     }
@@ -609,7 +665,12 @@ function processCommands(command) {
                     startEvent(20);
                 } else if (filename === "module2.ai") {
                     startEvent(31);
+                } else if (filename === "module3.ai") {
+                    startEvent(33);
+                } else if (filename === "module4.ai") {
+                    // startEvent(33);
                 }
+
 
                 term.echo("Download Completed");
             }
