@@ -14,7 +14,7 @@ let sendNews = (data) => {
     foundNews.visible = true;
     console.log(foundNews)
 }
-let currentState = 33;
+let currentState = 1;
 let events = {
     1: [
         {
@@ -347,5 +347,3 @@ eventToBeTriggered.forEach(event => {
     })
 
 }
-// startEvent(34);
-// startEvent(35);

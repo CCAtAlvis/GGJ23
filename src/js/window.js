@@ -171,4 +171,3 @@ function blackScreen(){
 </div>`;
   fullHtml.append(element)
 }
-blackScreen();
