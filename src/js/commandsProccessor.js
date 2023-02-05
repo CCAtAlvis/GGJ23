@@ -186,7 +186,7 @@ let lsCommands = {
     },
     "krishna.namnaik@example.com": {
         "/": {
-            "krishnanamaik": {
+            "krishnanamnaik": {
                 "name": {
                     "documents": {
                         "notes.txt": {
@@ -395,7 +395,9 @@ function processCommands(command) {
         }
     }
     else if (command.name == "netstat") {
-        term.echo("netstat");
+        term.echo("Network Details");
+        term.echo("Current IP : " + loggedIP);
+        term.echo("Parent IP : 192.168");
         // current ip, subnet ips
     }
     else if (command.name == "rm") {
@@ -404,6 +406,21 @@ function processCommands(command) {
     }
     else if (command.name == "sendmail") {
         term.echo("sendmail");
+        if (command.args.length < 3) {
+            throw Error('invalid arguments');
+        }
+        else if (command.args[0] === "" && command.args[1] === "") {
+            throw Error('Missing arguments to, from or text');
+        }
+        else {
+            term.echo("Email sent successfully!");
+
+            if(command.args[0] === "prisha.vernekar@example.com" && command.args[1] === "abhijith.bhat@example.com")
+            {
+                // Get mail password has been reset to default admin@123. Please reset it asap.
+
+            }
+        }
         // Send email from, to, text
     }
     else if (command.name == "wput") {
