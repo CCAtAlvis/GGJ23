@@ -1,0 +1,23 @@
+{
+  "name": "ggj23",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/electron.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CCAtAlvis/GGJ23.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/CCAtAlvis/GGJ23/issues"
+  },
+  "homepage": "https://github.com/CCAtAlvis/GGJ23#readme",
+  "dependencies": {
+    "electron": "^22.2.0"
+  }
+}
