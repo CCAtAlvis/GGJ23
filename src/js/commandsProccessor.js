@@ -373,9 +373,12 @@ let lsCommands = {
             "usr": {
                 "reginaldwagner": {
                     "documents": {
-                        "notes.txt": {
+                        "HARBINGER.txt": {
                             isFile: true,
-                            text: "This invention is truly unparalleled and has the potential to eradicate issues of hunger, crime, and poverty. I am amazed at the AI's capacity to tackle contemporary problems with such ease and efficiency. It is almost unnerving to see just how intelligent this AI technology has become."
+                            text: `The backup for the last module is stored here -
+                            Remote address - mod4peace@harbinger.ai
+                            Password - harbinger-ginger
+                            `
                         }
                     },
                     "office": {
