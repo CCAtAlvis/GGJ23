@@ -172,15 +172,29 @@ let events = {
             }
         }
     ],
-    20: [
-        {
+    20: [{
             action: tirggerAiBot,
             data: {
                 id: 17,
                 delay: 1000
             }
         }
-    ]
+    ],
+    21: [{
+        action: tirggerAiBot,
+        data: {
+            id: 18,
+            delay: 1000
+        }
+    }],
+    22: [{
+        action: tirggerAiBot,
+        data: {
+            id: 19,
+            delay: 1000
+        }
+    }],
+    
 
 }
 
