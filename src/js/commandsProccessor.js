@@ -174,7 +174,7 @@ let lsCommands = {
                     "documents": {
                         "note5.txt" : {
                             isFile : true,
-                            text : "But as it soon turns out, this critical module was silently corrupted by the Omega System by manipulating the data that Harbinger perceived and learnt from. It was thus able to control and influence Harbinger. Harbinger had gotten severely strict and had started punishing every minor action to the extent where even basic human rights were violated. The situation became much worse than ever before, making life on the planet unbearable. People began to flee to underground cities to run and hide for their lives from the outside world full of dystopian chaos with limited resources, struggling to meet basic needs."
+                            text : "But as it soon turns out, Harbinger had gotten severely strict and had started punishing every minor action to the extent where even basic human rights were violated. The situation became much worse than ever before, making life on the planet unbearable. The Utopian life that Harbinger once promised had now become severely dystopia."
                         },
                         "1.txt": {
                             isFile: true,

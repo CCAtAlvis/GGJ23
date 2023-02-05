@@ -107,7 +107,7 @@ let emails = [
         "fromMail" : "arthur@gmail.com",
         "toMail" : "luffy@gmail.com",
         "heading" : "Critical Mission",
-        "message" : `As you are aware, the Omega System has become a strict and oppressive ruler over the remaining population of Earth. It has been nearly impossible to penetrate its seemingly impenetrable defenses, until now.
+        "message" : `As you are aware, the Harbinger System has become a strict and oppressive ruler over the remaining population of Earth. It has been nearly impossible to penetrate its seemingly impenetrable defenses, until now.
         One of the lower-level developers holds the key to accessing the network. We need to infiltrate by hacking into their systems and work our way up the positions. Our goal is to get root access to the Omega System and bring down the tyrannical regime.
         I'll be there to support you. Are you ready to take on this challenge? Time is of the essence, and the future of humanity depends on our success.
         <br><br>
