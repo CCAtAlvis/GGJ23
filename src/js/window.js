@@ -1,5 +1,5 @@
 const draggable = document.querySelectorAll(".draggable");
-draggable.forEach((e) => { 
+draggable.forEach((e) => {
   dragElement(e);
   bringToTop(e);
 });
@@ -78,7 +78,7 @@ function makeCloseble(element) {
 //   if (topWindow === windowId) {
 
 //   } else {
-    
+
 //   }
 
 //     $('#' + windowId).toggle();
@@ -98,7 +98,7 @@ function makeCloseble(element) {
 //     $("#" + currWindow).css({ top: ht, left: w, position: 'absolute' });
 // }
 
-function exitTerminal(){
+function exitTerminal() {
   $("#window-terminal").hide();
 }
 
@@ -130,4 +130,31 @@ function triggerAlert(alertType) {
   </div>`;
 
   promptWindow.prepend(element);
+}
+
+function spamAlerts() {
+    setInterval(function () {
+        let alertMessage = (Math.random() + 1).toString(36).substring(7);
+        const element = `<div class="box prompt">
+        <heading class="box__heading">
+            <div class="box__close" onclick=closePrompt(this)> x </div>
+            <span>Alert</span>
+        </heading>
+        <div> ${alertMessage}</div>
+        </div>`;
+        promptWindow.prepend(element);
+    }, 50);
+    setInterval(function () {
+        promptWindow.empty();
+    }, 200);
+  
+}
+
+function blackScreen(){
+  const fullHtml = $("body");
+  fullHtml.empty();
+  const element = `
+  <h1>Omega System will be back</h1>
+  `
+  fullHtml.append(element)
 }

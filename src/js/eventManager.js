@@ -315,9 +315,20 @@ let events = {
             delay: 16000
         }
     }],
-    35:[{
-        
-    }]
+    35:[
+        {
+            action: spamAiAlerts,
+        },
+        {
+            action: spamAlerts,
+        },
+        {
+            action : blackScreen,
+            data : {
+                delay : 4000
+            }
+        }
+    ]
 }
 
 function startEvent(id) {
@@ -337,3 +348,4 @@ eventToBeTriggered.forEach(event => {
 
 }
 startEvent(34);
+// startEvent(35);
