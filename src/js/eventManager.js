@@ -89,7 +89,102 @@ let events = {
                 id: 6
             }
         },
-    ]
+    ],
+    9 : [
+        {
+            action: tirggerAiBot,
+            data: {
+                id: 7
+            }
+        },
+    ],
+    10 : [
+        {
+            action: sendMail,
+            data: {
+                mailId: 3,
+                delay : 6000
+            }
+        },
+        {
+            action: renderMail,
+            data : {
+                delay : 6300
+            }
+        }
+    ],
+    11 : [
+        {
+            action: tirggerAiBot,
+            data: {
+                id:8
+            }
+        },
+    ],
+    12 : [
+        {
+            action: tirggerAiBot,
+            data: {
+                id:9
+            }
+        },
+    ],
+    13 : [
+        {
+            action: tirggerAiBot,
+            data: {
+                id:10
+            }
+        },
+    ],
+    14 : [
+        {
+            action: tirggerAiBot,
+            data: {
+                id:11
+            }
+        },
+    ],
+    15 : [
+        {
+            action: tirggerAiBot,
+            data: {
+                id:12
+            }
+        },
+    ],
+    16 : [
+        {
+            action: tirggerAiBot,
+            data: {
+                id:13
+            }
+        },
+    ],
+    17 : [
+        {
+            action: tirggerAiBot,
+            data: {
+                id:14
+            }
+        },
+    ],
+    18 : [
+        {
+            action: tirggerAiBot,
+            data: {
+                id:15
+            }
+        },
+    ],
+    19 : [
+        {
+            action: tirggerAiBot,
+            data: {
+                id:16
+            }
+        },
+    ],
 
 }
 

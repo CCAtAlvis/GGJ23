@@ -6,7 +6,22 @@ let sshCommands = {
     "root@74.125.226.45": {
         prompt: "root@74.125.226.45> ",
         path: "/",
-        password : "admin"
+        password: "admin"
+    },
+    "gautam.uchil@example.com": {
+        prompt: "root@74.125.226.38> ",
+        path: "/",
+        password: "password"
+    },
+    "krishna.namnaik@example.com": {
+        prompt: "root@74.125.226.31> ",
+        path: "/",
+        password: "17081962"
+    },
+    "philip.hopkins@example.com" : {
+        prompt: "root@74.125.226.13> ",
+        path: "/",
+        password: "admin@123"
     }
 }
 let loggedIP = "SynthOS";
@@ -71,9 +86,10 @@ let lsCommands = {
                 "file1": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
                 "file2": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" }
             },
-            "var" :{
-                "logs" : {
-                    "07.04.3043.log" : {isFile : true , text : `
+            "var": {
+                "logs": {
+                    "07.04.3043.log": {
+                        isFile: true, text: `
                     8.8.8.8 - 10 MB transferred at 11:00:01 AM
                     8.8.4.4 - 20 MB transferred at 11:05:01 AM
                     74.125.226.36 - 30 MB transferred at 11:10:01 AM
@@ -85,7 +101,8 @@ let lsCommands = {
                     74.125.226.45 - 30 MB transferred at 11:06:01 AM
                     ...
                     `},
-                    "08.04.3043.log" : {isFile : true , text :  `
+                    "08.04.3043.log": {
+                        isFile: true, text: `
                     8.8.8.8 - 10 MB transferred at 11:00:01 AM
                     8.8.4.4 - 20 MB transferred at 11:05:01 AM
                     74.125.226.36 - 30 MB transferred at 11:10:01 AM
@@ -99,7 +116,7 @@ let lsCommands = {
                     `},
                 }
             },
-            ".history" :{isFile : true , text : "cd ..\nmongo\nnode index.js\nclear\nclear\ngit reset --hard\nset password helloworld" }
+            ".history": { isFile: true, text: "cd ..\nmongo\nnode index.js\nclear\nclear\ngit reset --hard\nset password helloworld" }
 
         }
     },
@@ -131,10 +148,110 @@ let lsCommands = {
                 "file1": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
                 "file2": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" }
             },
-            ".history" :{isFile : true , text : "cd ..\nmongo\nnode index.js\nclear\nclear\ngit reset --hard\nset password helloworld" }
+            ".history": { isFile: true, text: "cd ..\nmongo\nnode index.js\nclear\nclear\ngit reset --hard\nset password helloworld" }
 
         }
-    }
+    },
+    "gautam.uchil@example.com": {
+        "/": {
+            "gautamuchil": {
+                "name": {
+                    "documents": {
+                        "release_notes.txt": {
+                            isFile: true,
+                            "text": "The release of Version 0.1 in May, 1969 marks a significant milestone in AI development. As per the initial reports, the AI is functioning effectively and demonstrating the ability to identify criminal intentions through analyzing public sentiment. This breakthrough is a testament to the dedicated efforts of Dr. Krishna Namnaik, who led the research team. This achievement holds immense potential to positively impact humanity. Congratulations to the entire team!"
+                        }
+                    },
+                    "office": {
+                        "final.pptx": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
+                        "id.png": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
+                        "ssh.pem": {
+                            isFile: true,
+                            "text": "SSH-12345kdsonsdpodonJOSDHohDSnoD"
+                        }
+                    }
+                }
+            },
+            "bin": {
+                "c++": { isFile: true, text: "asxdvfdnjcBUCSBVKCvaUCviyvcyv" },
+                "node": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" }
+            },
+            "var": {
+                "file1": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
+                "file2": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" }
+            },
+            ".history": { isFile: true, text: "cd ..\nmongo\nnode index.js\nclear\nclear\ngit reset --hard\nset password helloworld" }
+
+        }
+    },
+    "krishna.namnaik@example.com": {
+        "/": {
+            "krishnanamaik": {
+                "name": {
+                    "documents": {
+                        "notes.txt": {
+                            isFile: true,
+                            text: "This invention is truly unparalleled and has the potential to eradicate issues of hunger, crime, and poverty. I am amazed at the AI's capacity to tackle contemporary problems with such ease and efficiency. It is almost unnerving to see just how intelligent this AI technology has become."
+                        },
+                        "security-breach.txt": {
+                            isFile: true,
+                            text: `I regret to inform you that there has been a security breach in our network by an unknown entity. Although no changes have been detected, it is possible that some of our confidential data may have been compromised. The following users have been identified as potentially vulnerable:\nPeter Payne(peter.payne@example.com)\nPhilip Hopkins(philip.hopkins@example.com)\nPrajna Anand(prajna.anand@example.com)\nPrathiksha Chiplunkar(prathiksha.chiplunkar@example.com)\nAs a precautionary measure, their passwords have been reset to "admin@123." I urge everyone to exercise caution and change your passwords as soon as possible.In case you need assistance, please reach out to me.\nPlease take this matter seriously and act promptly to secure your account.If you notice any suspicious activity, please report it immediately.\nRegards,\nMrs.Prisha Vernekar\nSr.DevOps Engineer`
+                        }
+                    },
+                    "office": {
+                        "final.pptx": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
+                        "id.png": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
+                        "ssh.pem": {
+                            isFile: true,
+                            "text": "SSH-12345kdsonsdpodonJOSDHohDSnoD"
+                        }
+                    }
+                }
+            },
+            "bin": {
+                "c++": { isFile: true, text: "asxdvfdnjcBUCSBVKCvaUCviyvcyv" },
+                "node": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" }
+            },
+            "var": {
+                "file1": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
+                "file2": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" }
+            },
+            ".history": { isFile: true, text: "cd ..\nmongo\nnode index.js\nclear\nclear\ngit reset --hard\nset password helloworld" }
+
+        }
+    },
+    "philip.hopkins@example.com": {
+        "/": {
+            "philip": {
+                "name": {
+                    "documents": {
+                        "email.txt": {
+                            isFile: true,
+                            text: `To aayushi.ramesh@example.com:\nSubject:  Experimentation with AI - Concerns and progress with swayness module\nDo we want to proceed with the experiment? The AI appears to have strongly held convictions and can be difficult to sway in certain circumstances. Although this may be concerning, it is functioning well at present. I am eagerly awaiting the completion of the next module so that I can perform a comprehensive analysis.`
+                        }
+                    },
+                    "office": {
+                        "final.pptx": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
+                        "id.png": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
+                        "ssh.pem": {
+                            isFile: true,
+                            "text": "SSH-12345kdsonsdpodonJOSDHohDSnoD"
+                        }
+                    }
+                }
+            },
+            "bin": {
+                "c++": { isFile: true, text: "asxdvfdnjcBUCSBVKCvaUCviyvcyv" },
+                "node": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" }
+            },
+            "var": {
+                "file1": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" },
+                "file2": { isFile: true, text: "dan svfiUSBIc uovyiqbuvy" }
+            },
+            ".history": { isFile: true, text: "cd ..\nmongo\nnode index.js\nclear\nclear\ngit reset --hard\nset password helloworld" }
+
+        }
+    },
 }
 function processCommands(command) {
     var result = "command not found";
@@ -143,16 +260,24 @@ function processCommands(command) {
             throw Error('unable to connect the given ip');
         }
         else if (sshCommands[command.args[0]].prompt) {
-            if(sshCommands[command.args[0]].password){
-                if(command.args[1]!="-p"){
+            if (sshCommands[command.args[0]].password) {
+                if (command.args[1] != "-p") {
+                    startEvent(13);
                     throw Error("Password is required");
                 }
-                if(command.args[2]!=sshCommands[command.args[0]].password){
+                if (command.args[2] != sshCommands[command.args[0]].password) {
+                    startEvent(17);
                     throw Error("Password is wrong");
                 }
             }
-            if(command.args[0] == "root@186.255.190.185"){
+            if (command.args[0] == "root@186.255.190.185") {
                 startEvent(8);
+            }
+            if (command.args[0] == "gautam.uchil@example.com") {
+                startEvent(14);
+            }
+            if (command.args[0] == "krishna.namnaik@example.com") {
+                startEvent(18);
             }
             loggedIP = command.args[0];
             currentPath = sshCommands[command.args[0]].path;
@@ -176,8 +301,9 @@ function processCommands(command) {
             targetFiles = targetFiles + " " + file;
         })
         startEvent(6);
-        if(loggedIP == "root@186.255.190.185"){
+        if (loggedIP == "root@186.255.190.185") {
             startEvent(9);
+            startEvent(10);
         }
         term.echo(targetFiles);
     }
@@ -239,10 +365,16 @@ function processCommands(command) {
                     throw Error(`cd : ${folder} is not directory`);
                 }
             })
-            if(files[command.args[0]].isFile){
+            if (files[command.args[0]]?.isFile) {
+                if (command.args[0] == "release_notes.txt") {
+                    startEvent(15)
+                }
+                if (command.args[0] == "security-breach.txt") {
+                    startEvent(19)
+                }
                 term.echo(files[command.args[0]].text);
-            }    
-            else{
+            }
+            else {
                 throw Error("Invalid File")
             }
 
