@@ -15,6 +15,9 @@ var term = terminalWindow.terminal(function(command, term) {
        
     } else if (cmd.name === 'echo') {
         term.echo(cmd.rest);
+    } else if (cmd.name === 'help') {
+        term.echo("opening help");
+        openHelp();
     } else if (command !== '') {
         try {
             processCommands(cmd);

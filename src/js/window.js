@@ -102,6 +102,10 @@ function exitTerminal(){
   $("#window-terminal").hide();
 }
 
+function openHelp() {
+  $("#window-help").show();
+}
+
 function closePrompt(e) {
   const parent = $(e.parentElement.parentElement)
   parent.slideUp(() => {
