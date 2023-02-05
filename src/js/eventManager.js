@@ -14,7 +14,7 @@ let sendNews = (data) => {
     foundNews.visible = true;
     console.log(foundNews)
 }
-let currentState = 34;
+let currentState = 33;
 let events = {
     1: [
         {
@@ -264,6 +264,57 @@ let events = {
             id: 25
         }
     }],
+    32: [{
+        action: tirggerAiBot,
+        data: {
+            id: 26,
+            delay: 2000
+        }
+    }],
+    33: [{
+        action: tirggerAiBot,
+        data: {
+            id: 27,
+            delay: 2000
+        }
+    }],
+    34: [{
+        action: tirggerAiBot,
+        data: {
+            id: 28,
+            delay: 2000
+        }
+    },{
+        action: tirggerAiBot,
+        data: {
+            id: 29,
+            delay: 5000
+        }
+    },{
+        action: tirggerAiBot,
+        data: {
+            id: 30,
+            delay: 7000
+        }
+    },{
+        action: tirggerAiBot,
+        data: {
+            id: 31,
+            delay: 10000
+        }
+    },{
+        action: tirggerAiBot,
+        data: {
+            id: 32,
+            delay: 13000
+        }
+    }, {
+        action: sendMail,
+        data: {
+            mailId: 9,
+            delay: 16000
+        }
+    }],
     35:[
         {
             action: spamAiAlerts,
@@ -296,4 +347,5 @@ eventToBeTriggered.forEach(event => {
     })
 
 }
-startEvent(35);
+startEvent(34);
+// startEvent(35);

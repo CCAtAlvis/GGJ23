@@ -23,7 +23,14 @@ const aiBotTexts = {
     22: 'Do you really think wputting this can really bring down Harbinger System?!!',
     23: 'See I told you it wont be able to! Ohhh... It seems like we did really crack most of the passwords. Lets try accessing aayushi.ramesh@example.com',
     24: 'I sense something deep in the bin, you know the drill if you found something, i am going on a break till then',
-    25: 'These weren\'t as good upgrades as I was expected them to be. Can you do any better?!'
+    25: 'These weren\'t as good upgrades as I was expected them to be. Can you do any better?!',
+    26: 'module3.ai.test... lets try to track down author for this test',
+    27: 'Finally found all 3 modules!! But it still feels like a piece is missing',
+    28: 'Processing...',
+    29: 'Installing Module...',
+    30: 'Gainig ROOT Access...',
+    31: 'Assuming Control...',
+    32: 'Harbinger Activated.',
 
     // 18: 'These users might have never reset the passwords.'
 };

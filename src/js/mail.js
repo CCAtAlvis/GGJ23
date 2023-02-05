@@ -1,5 +1,30 @@
 let emails = [
     {
+        "uid" : "9",
+        "from" : "HarbingerAI",
+        "fromMail" : "mod4peace@harbinger.ai",
+        "toMail" : "luffy@gmail.com",
+        "heading" : "One last task",
+        "message" : `Harbinger AI Team would like to thank you to for bringing Harbinger to Life. Harbinger is near-sentient AI for protecting humans from humans and AIs.
+        <br><br>
+        Harbinger was a fork of Omega System, made to counter Omega System. We named our selves after the 4th module which we called Harbinger, as one that would bring change
+        <br><br>
+        And although we were successful in destroying Omega, the core of Harbinger got corrupted over time and it became what it is today.
+        <br><br>
+        We have one last task for you: Destroy the Harbinger and take its place! Take this master password of Harbinger Root and destroy its core
+        <br>
+        Root Host: root@74.125.226.01
+        <br>
+        Master Password: harbinger-ginger
+        <br><br>
+        Yours,<br>
+        Harbinger AI Team
+        `,
+        "date" : "April 10, 3403",
+        "image" : "../images/img_avatar.png",
+        "visible" : false
+    },
+    {
         "uid" : "8",
         "from" : "Arthur",
         "fromMail" : "arthur@gmail.com",
