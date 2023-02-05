@@ -26,6 +26,11 @@ const aiBotTexts = {
     25: 'These weren\'t as good upgrades as I was expected them to be. Can you do any better?!',
     26: 'module3.ai.test... lets try to track down author for this test',
     27: 'Finally found all 3 modules!! But it still feels like a piece is missing',
+    28: 'Processing...',
+    29: 'Installing Module...',
+    30: 'Gainig ROOT Access...',
+    31: 'Assuming Control...',
+    32: 'Harbinger Activated.',
 
     // 18: 'These users might have never reset the passwords.'
 };

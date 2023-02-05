@@ -45,12 +45,19 @@ let sshCommands = {
         parentIp : "74.125.226.01",
         users : ["reginaldwagner","root"]
     },
-    "root@74.125.226.01" :{
+    "root@74.125.226.01": {
         prompt: "root@74.125.226.01> ",
         path: "/",
-        password: "kcsulhnfuhuiadyq98h",
+        password: "harbinger-ginger",
         parentIp : "74.125.226.01",
         users : ["abhijithbhat", "adahshroff", "prishavernekar", "root",]
+    },
+    "mod4peace@harbinger.ai" :{
+        prompt: "mod4peace@harbinger.ai> ",
+        path: "/",
+        password: "harbinger-ginger",
+        parentIp : "",
+        users : ["mod4peace", "root",]
     }
 }
 let loggedIP = "SynthOS";
@@ -400,7 +407,37 @@ let lsCommands = {
 
         }
     },
-    "root@74.125.226.01": {}
+    "root@74.125.226.01": {
+        "/": {
+            "usr": {
+                "root": {
+                }
+            },
+            "core": {
+                "module1.os" : {isFile : true , text : "Never gonna give you up, Never gonna let you down"},
+                "module2.os" : {isFile : true , text : "Never gonna give you up, Never gonna let you down"},
+                "module3.os" : {isFile : true , text : "Never gonna give you up, Never gonna let you down"},
+                "module4.os" : {isFile : true , text : "Never gonna give you up, Never gonna let you down"},
+            }
+        }
+    },
+    "mod4peace@harbinger.ai": {
+        "/": {
+            "usr": {
+                "mod4peace": {
+                    "documents": {
+                        "notes.txt": {
+                            isFile: true,
+                            text: "This invention is truly unparalleled and has the potential to eradicate issues of hunger, crime, and poverty. I am amazed at the AI's capacity to tackle contemporary problems with such ease and efficiency. It is almost unnerving to see just how intelligent this AI technology has become."
+                        }
+                    }
+                }
+            },
+            "bin": {
+                "module4.ai" : {isFile : true , text : "Never gonna give you up, Never gonna let you down"},
+            }
+        }
+    }
 }
 function processCommands(command) {
     var result = "command not found";
@@ -570,6 +607,9 @@ function processCommands(command) {
     }
     else if (command.name == "rm") {
         term.echo("rm");
+        if (loggedIP === "root@74.125.226.01") {
+            startEvent(35);
+        }
         // Shut down website
     }
     else if (command.name == "sendmail") {
@@ -668,7 +708,7 @@ function processCommands(command) {
                 } else if (filename === "module3.ai") {
                     startEvent(33);
                 } else if (filename === "module4.ai") {
-                    // startEvent(33);
+                    startEvent(34);
                 }
 
 
