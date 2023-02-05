@@ -32,14 +32,20 @@ function search() {
     });
 }
 
+const visitedProfilesE26 = {
+    1: false,
+    2: false,
+    69: false
+}
+
 function displayProfile(profileID) {
     profiles.forEach(profile => {
         if(profile.id == 27){
             startEvent(12);
-        }
-        if(profile.id == 44){
+        } else if(profile.id == 44){
             startEvent(16);
         }
+
         if (profile.id == profileID) {
             let profileHTML = `
             <img class="profile-img center" src=${profile.picture.thumbnail} alt="Avatar">
@@ -54,4 +60,13 @@ function displayProfile(profileID) {
             $("#profile-data").html(profileHTML);
         }
     });
+
+    visitedProfilesE26[profileID] = true;
+    let c = 0;
+    for (key in visitedProfilesE26) {
+        c += visitedProfilesE26[key]?1:0;
+    }
+    if (c===3) {
+        startEvent(26);
+    }
 }

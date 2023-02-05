@@ -39,11 +39,11 @@ let sshCommands = {
         users : ["philip","root"]
     },
     "root@74.125.226.01" :{
-        prompt: "root@74.125.226.13> ",
+        prompt: "root@74.125.226.01> ",
         path: "/",
         password: "kcsulhnfuhuiadyq98h",
         parentIp : "74.125.226.01",
-        users : ["philip","root","prisha","adah","abhijith"]
+        users : ["abhijithbhat", "adahshroff", "prishavernekar", "root",]
     }
 }
 let loggedIP = "SynthOS";
@@ -520,15 +520,13 @@ function processCommands(command) {
         else {
             term.echo("Email sent successfully!");
 
-            if(command.args[0] === "prisha.vernekar@example.com" && command.args[1] === "abhijith.bhat@example.com")
-            {
-                // Get mail password has been reset to default admin@123. Please reset it asap.
-                setTimeout( ()=>{sendMail({mailId : 4})}, 3000); ;
+            if(command.args[0] === "prisha.vernekar@example.com" && command.args[1] === "abhijith.bhat@example.com") {
+                startEvent(27);
             }
         }
         // Send email from, to, text
     }
-    else if(command.name == "user"){
+    else if(command.name == "users"){
         if(!command.args[0]){
             throw Error("Please provide Ip address");
         }

@@ -14,7 +14,7 @@ let sendNews = (data) => {
     foundNews.visible = true;
     console.log(foundNews)
 }
-let currentState = 24;
+let currentState = 26;
 let events = {
     1: [
         {
@@ -212,8 +212,40 @@ let events = {
             mailId: 4,
             delay: 3000
         }
+    }],
+    26: [{
+        action: sendMail,
+        data: {
+            mailId: 5,
+            delay: 3000
+        }
+    },{
+        action: sendMail,
+        data: {
+            mailId: 6,
+            delay: 10000
+        }
+    }],
+    27: [{
+        action: sendMail,
+        data: {
+            mailId: 7,
+            delay: 2000
+        }
+    }, {
+        action: sendMail,
+        data: {
+            mailId: 8,
+            delay: 5000
+        }
+    }],
+    28: [{
+        action: tirggerAiBot,
+        data: {
+            id: 22,
+            delay: 3000
+        }
     }]
-
 }
 
 function startEvent(id) {
@@ -232,3 +264,4 @@ eventToBeTriggered.forEach(event => {
     })
 
 }
+startEvent(27);
