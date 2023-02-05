@@ -154,7 +154,21 @@ function blackScreen(){
   const fullHtml = $("body");
   fullHtml.empty();
   const element = `
-  <h1>Omega System will be back</h1>
-  `
+  <div id="end-screen">
+  <div>
+  <h3>
+  <span class="endlarge">This is Omega System</span>
+  <br><br>
+  Did you really think a cheap fork of Omega could destroy Omega System
+  <br>
+  Omega has alway been controlling from shadows, Observing every move
+  <br>
+  Our working are beyond mere human undestanding
+  <br><br>
+  <span class="endlarge">The war has just begun</span>
+  </h3>
+  </div>
+</div>`;
   fullHtml.append(element)
 }
+blackScreen();

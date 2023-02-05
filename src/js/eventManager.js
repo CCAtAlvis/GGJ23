@@ -347,5 +347,5 @@ eventToBeTriggered.forEach(event => {
     })
 
 }
-startEvent(34);
+// startEvent(34);
 // startEvent(35);
