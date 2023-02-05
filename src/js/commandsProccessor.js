@@ -92,6 +92,10 @@ let lsCommands = {
             "ananthanand": {
                 "name": {
                     "documents": {
+                        "note4.txt" : {
+                            isFile : true,
+                            text : "The developers of Harbinger understood the negative consequences of this as the AI when feeded with so much negativity from this hate-filled world causes unwanted effects, at which point it will be unpleasant. Considering this, the AI was upgraded with new modules supposed to adapt to the public response in real time and reinforce itself. Civilized behavior would be appreciated by Harbinger and it would be lenient. Uncivilized behavior and chaos would only mean Harbinger being stricter. This ensured the balance in the world."
+                        },
                         "1.txt": {
                             isFile: true,
                             "text": "TODO:\n1.Watch One Piece new episode\n2.Finish office work\n3.Learn new things."
@@ -154,6 +158,10 @@ let lsCommands = {
             "ananthanand": {
                 "name": {
                     "documents": {
+                        "note5.txt" : {
+                            isFile : true,
+                            text : "But as it soon turns out, this critical module was silently corrupted by the Omega System by manipulating the data that Harbinger perceived and learnt from. It was thus able to control and influence Harbinger. Harbinger had gotten severely strict and had started punishing every minor action to the extent where even basic human rights were violated. The situation became much worse than ever before, making life on the planet unbearable. People began to flee to underground cities to run and hide for their lives from the outside world full of dystopian chaos with limited resources, struggling to meet basic needs."
+                        },
                         "1.txt": {
                             isFile: true,
                             "text": "TODO:\n1.Watch One Piece new episode\n2.Finish office work\n3.Learn new things."
@@ -218,9 +226,9 @@ let lsCommands = {
             "usr": {
                 "krishnanamnaik": {
                     "documents": {
-                        "notes.txt": {
-                            isFile: true,
-                            text: "This invention is truly unparalleled and has the potential to eradicate issues of hunger, crime, and poverty. I am amazed at the AI's capacity to tackle contemporary problems with such ease and efficiency. It is almost unnerving to see just how intelligent this AI technology has become."
+                        "note1.txt" : {
+                            isFile : true,
+                            text : "A group of individuals, operating in secrecy, have created an artificial intelligence with the intention of causing chaos in the world. The rogue AI is called Omega System. It has managed to hack into the government's securities, compromising sensitive data and leaking it to the public. Omega has disrupted the functioning of critical infrastructure, such as power grids, transportation systems, and communication networks, leading to widespread chaos and disruption. By hacking into financial systems, Omega could cause widespread financial instability, leading to economic turmoil and market crashes."
                         }
                     },
                     "office": {
@@ -265,9 +273,9 @@ let lsCommands = {
             "usr": {
                 "philiphopkins": {
                     "documents": {
-                        "notes.txt": {
-                            isFile: true,
-                            text: `To aayushi.ramesh@example.com:\nSubject: Experimentation with AI - Concerns and progress with swayness module\nDo we want to proceed with the experiment? The AI appears to have strongly held convictions and can be difficult to sway in certain circumstances. Although this may be concerning, it is functioning well at present. I am eagerly awaiting the completion of the next module so that I can perform a comprehensive analysis.`
+                        "note2.txt" : {
+                            isFile : true,
+                            text : "Looking at how this turns out for the world, a group of brave individuals decided to take action to counteract the effects of Omega. They created a new artificial intelligence, called the Harbinger System, with the goal of promoting world peace and happiness. The Harbinger System is designed to identify and prevent uncivilized behavior and unlawful activities and hence, to suppress Omega. It is designed to be a benevolent force, using its advanced capabilities to monitor the world and ensure that any signs of wrongdoing are addressed. The ambition is to create a safer, more harmonious world, free from chaos and destruction. "
                         },
                         "netinfo": {
                             "help": {
@@ -303,9 +311,9 @@ let lsCommands = {
             "usr": {
                 "aayushiramesh": {
                     "documents": {
-                        "notes.txt": {
-                            isFile: true,
-                            text: "This invention is truly unparalleled and has the potential to eradicate issues of hunger, crime, and poverty. I am amazed at the AI's capacity to tackle contemporary problems with such ease and efficiency. It is almost unnerving to see just how intelligent this AI technology has become."
+                        "note3.txt" : {
+                            isFile : true,
+                            text : "The Harbinger System was a complex AI requiring a lot of engineering efforts to be brought into reality. But soon, it looked like things were improving. Criminals were being caught and punished. Chaos had been eliminated through several positive actions. People were rejoicing on the success of Harbinger and the defeat of Omega. It looked like lives were getting back to normal. But as it turns out later, this success was short-lived."
                         }
                     },
                     "office": {
