@@ -1,5 +1,5 @@
 const aiModules = ['module1.ai','module2.ai','module3.ai','module4.ai'];
-
+let adminPods = ["root@74.125.226.01"];
 let sshCommands = {
     "root@186.255.190.185": {
         prompt: "root@186.255.190.185> ",
@@ -466,7 +466,16 @@ function processCommands(command) {
         }
     }
     else if (command.name == "wput") {
-        term.echo("wput");
+        if(command.args[0] == "https://tinyurl.com/reset-passwd" && command.args[1]=="prisha.vernekar@example.com"){
+            for(let pods in sshCommands){
+                if(!adminPods.includes(pods)){
+                    delete sshCommands[pods].password;
+                }
+            }
+        }
+        else{
+            throw Error("Unable to upload the file to given location");
+        }
         // wput file to url
     }
     else if (command.name == "wget") {
